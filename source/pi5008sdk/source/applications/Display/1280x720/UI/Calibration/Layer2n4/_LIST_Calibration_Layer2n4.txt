@@ -1,0 +1,3 @@
+Point.bmp
+Point_Sel.bmp
+Point_Move.bmp

@@ -1,0 +1,6 @@
+echo asic init hd\n
+
+# Pad control 
+
+set {int}0xf010004c    = 0x00020202 
+set {int}0xf0100050    = 0x02020202 

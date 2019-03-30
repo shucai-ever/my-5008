@@ -1,0 +1,195 @@
+UI/Common/Layer0/_LUT_Common_Layer0.bin					255
+UI/Common/Layer0/Rec_RLE.bin							0	255	1150 15 115 42
+UI/Common/Layer0/Btn_Cancel_Sel_RLE.bin					0	255	644 382 135 40
+UI/Common/Layer0/Btn_OK_Sel_RLE.bin						0	255	501 382 135 40
+UI/Common/Layer0/PopUp_Calibration_RLE.bin				0	255	492 307 296 105
+UI/Common/Layer0/PopUp_Done_RLE.bin						0	255	492 307 296 105
+UI/Common/Layer0/PopUp_DoNotTurnOff_RLE.bin				0	255	492 307 296 105
+UI/Common/Layer0/PopUp_NoCameraInput_RLE.bin			0	255	492 307 296 105
+UI/Common/Layer0/PopUp_NoSaved_RLE.bin					0	255	492 307 296 105
+UI/Common/Layer0/PopUp_NoSDCard_RLE.bin					0	255	492 307 296 105
+UI/Common/Layer0/PopUp_Saved_RLE.bin					0	255	492 307 296 105
+UI/Common/Layer0/PopUp_Shutdown_RLE.bin					0	255	492 307 296 105
+UI/Common/Layer0/PopUp_ViewGen_RLE.bin					0	255	492 307 296 105
+UI/Common/Layer0/Popup_NoUpdate_RLE.bin					0	255	492 307 296 105
+UI/Common/Layer0/Popup_Failed_RLE.bin					0	255	492 307 296 105
+UI/Common/Layer0/PopUp_TBD_RLE.bin						0	255	492 307 296 105
+UI/Common/Layer0/Progress_0_RLE.bin						0	255	452 516 376 47
+UI/Common/Layer0/Progress_10_RLE.bin					0	255	452 516 376 47
+UI/Common/Layer0/Progress_20_RLE.bin					0	255	452 516 376 47
+UI/Common/Layer0/Progress_30_RLE.bin					0	255	452 516 376 47
+UI/Common/Layer0/Progress_40_RLE.bin					0	255	452 516 376 47
+UI/Common/Layer0/Progress_50_RLE.bin					0	255	452 516 376 47
+UI/Common/Layer0/Progress_60_RLE.bin					0	255	452 516 376 47
+UI/Common/Layer0/Progress_70_RLE.bin					0	255	452 516 376 47
+UI/Common/Layer0/Progress_80_RLE.bin					0	255	452 516 376 47
+UI/Common/Layer0/Progress_90_RLE.bin					0	255	452 516 376 47
+UI/Common/Layer0/Progress_100_RLE.bin					0	255	452 516 376 47
+UI/Common/Layer0/Progress1_10_RLE.bin					0	255	452 516 376 47
+UI/Common/Layer0/Progress1_20_RLE.bin					0	255	452 516 376 47
+UI/Common/Layer0/Progress1_30_RLE.bin					0	255	452 516 376 47
+UI/Common/Layer0/Progress1_40_RLE.bin					0	255	452 516 376 47
+UI/Common/Layer0/Progress1_50_RLE.bin					0	255	452 516 376 47
+UI/Common/Layer0/Progress1_60_RLE.bin					0	255	452 516 376 47
+UI/Common/Layer0/Progress1_70_RLE.bin					0	255	452 516 376 47
+UI/Common/Layer0/Progress1_80_RLE.bin					0	255	452 516 376 47
+UI/Common/Layer0/Progress1_90_RLE.bin					0	255	452 516 376 47
+UI/Common/Layer0/Progress1_100_RLE.bin					0	255	452 516 376 47
+UI/Common/Layer0/ViewMode_t3db_RLE.bin					0	255	536 12 311 82
+UI/Common/Layer0/ViewMode_t3df_RLE.bin					0	255	536 12 311 82
+UI/Common/Layer0/ViewMode_t3dl_RLE.bin					0	255	536 12 311 82
+UI/Common/Layer0/ViewMode_t3dlf_RLE.bin					0	255	536 12 311 82
+UI/Common/Layer0/ViewMode_t3dr_RLE.bin					0	255	536 12 311 82
+UI/Common/Layer0/ViewMode_t3drf_RLE.bin					0	255	536 12 311 82
+UI/Common/Layer0/ViewMode_tf_RLE.bin					0	255	536 12 311 82
+UI/Common/Layer0/ViewMode_tb_RLE.bin					0	255	536 12 311 82
+UI/Common/Layer4/_LUT_Common_Layer4.bin					255
+UI/Common/Layer4/Background_RLE.bin						0	255	0 0 1280 720
+UI/Common/Layer4/Outline_mode_2d_RLE.bin				0	255	0 0 528 720
+UI/Common/Layer4/Outline_mode_3d_RLE.bin				0	255	0 0 528 720
+UI/Common/Layer4/Outline_mode_init_RLE.bin				0	255	0 0 528 720
+UI/Common/Layer4/Outline_mode_none_RLE.bin				0	255	0 0 528 720
+UI/Common/Layer4/Outline_mode_wide_RLE.bin				0	255	0 0 528 720
+UI/Common/Layer4/Outline_view_front_RLE.bin				0	255	528 0 752 720
+UI/Common/Layer4/Outline_view_left_RLE.bin				0	255	528 0 752 720
+UI/Common/Layer4/Outline_view_none_RLE.bin				0	255	528 0 752 720
+UI/Common/Layer4/Outline_view_rear_RLE.bin				0	255	528 0 752 720
+UI/Common/Layer4/Outline_view_right_RLE.bin				0	255	528 0 752 720
+UI/Common/Layer4/Outline_view_wide_RLE.bin				0	255	528 0 752 720
+UI/Booting/Layer1/_LUT_Booting_Layer1.bin				255
+UI/Booting/Layer1/Booting_CI_RLE.bin					0	255	500 265 375 108
+UI/MainMenu/Layer1/_LUT_MainMenu_Layer1.bin				255
+UI/MainMenu/Layer1/Vehicle_Sel_RLE.bin					0	255	186 175 160 150
+UI/MainMenu/Layer1/Trigger_Sel_RLE.bin					0	255	935 175 160 150
+UI/MainMenu/Layer1/Video_Sel_RLE.bin					0	255	186 395 160 150
+UI/MainMenu/Layer1/Camera_Sel_RLE.bin					0	255	374 395 160 150
+UI/MainMenu/Layer1/Calibration_Sel_RLE.bin				0	255	560 395 160 150
+UI/MainMenu/Layer1/Update_Sel_RLE.bin					0	255	748 395 160 150
+UI/MainMenu/Layer1/SystemInfo_Sel_RLE.bin				0	255	935 395 160 150
+UI/MainMenu/Layer3/_LUT_MainMenu_Layer3.bin				255
+UI/MainMenu/Layer3/MainMenu_RLE.bin						0	255	186 175 909 410
+UI/Calibration/Layer1/_LUT_Calibration_Layer1.bin		255
+UI/Calibration/Layer1/Dialog_CalibFailRetry_RLE.bin		0	255	492 288 296 143
+UI/Calibration/Layer1/Dialog_RunMenu_RLE.bin			0	255	492 288 296 143
+UI/Calibration/Layer1/Dialog_CalibManual_RLE.bin		0	255	492 288 296 143
+UI/Calibration/Layer1/Dialog_SaveView_RLE.bin			0	255	756 288 296 143
+UI/Calibration/Layer1/CalibAuto_Sel_RLE.bin				0	255	48 122 230 64
+UI/Calibration/Layer1/CalibManual_Sel_RLE.bin			0	255	48 193 230 64
+UI/Calibration/Layer1/CalibBack_Sel_RLE.bin				0	255	48 279 230 40
+UI/Calibration/Layer1/ManualCalibFront_Sel_RLE.bin		0	255	48 122 230 64
+UI/Calibration/Layer1/ManualCalibRight_Sel_RLE.bin		0	255	48 193 230 64
+UI/Calibration/Layer1/ManualCalibLeft_Sel_RLE.bin		0	255	48 264 230 64
+UI/Calibration/Layer1/ManualCalibRear_Sel_RLE.bin		0	255	48 335 230 64
+UI/Calibration/Layer1/ManualCalibViewGen_Sel_RLE.bin	0	255	48 406 230 64
+UI/Calibration/Layer1/ManualCalibBack_Sel_RLE.bin		0	255	48 491 230 40
+UI/Calibration/Layer2n4/_LUT_Calibration_Layer2n4.bin	255
+UI/Calibration/Layer2n4/Point_RLE.bin					0	255	250 120 30 30
+UI/Calibration/Layer2n4/Point_Sel_RLE.bin				0	255	250 120 30 30
+UI/Calibration/Layer2n4/Point_Move_RLE.bin				0	255	250 120 30 30
+UI/Calibration/Layer3/_LUT_Calibration_Layer3.bin		255
+UI/Calibration/Layer3/Calibration_Menu_RLE.bin			0	255	35 35 256 298
+UI/Calibration/Layer3/ManualCalibration_Menu_RLE.bin	0	255	35 35 256 511
+UI/Calibration/Layer3/Mirror_RLE.bin					0	255	1112 34 139 44
+UI/Calibration/Layer3/Normal_RLE.bin					0	255	1112 34 139 44
+UI/Camera/Layer1n2/_LUT_Camera_Layer1n2.bin				255
+UI/Camera/Layer1n2/CameraFront_Sel_RLE.bin				0	255	48 122 230 64
+UI/Camera/Layer1n2/CameraRight_Sel_RLE.bin				0	255	48 193 230 64
+UI/Camera/Layer1n2/CameraLeft_Sel_RLE.bin				0	255	48 264 230 64
+UI/Camera/Layer1n2/CameraRear_Sel_RLE.bin				0	255	48 335 230 64
+UI/Camera/Layer1n2/CameraQuad_Sel_RLE.bin				0	255	48 406 230 64
+UI/Camera/Layer1n2/CameraCapture_Sel_RLE.bin			0	255	48 477 230 64
+UI/Camera/Layer1n2/CameraBack_Sel_RLE.bin				0	255	48 560 230 40
+UI/Camera/Layer3/_LUT_Camera_Layer3.bin					255
+UI/Camera/Layer3/Camera_Menu_RLE.bin					0	255	35 35 256 580
+UI/SystemInfo/Layer1n2/_LUT_SystemInfo_Layer1n2.bin		255
+UI/SystemInfo/Layer1n2/InfoBack_Sel_RLE.bin				0	255	48 421 230 40
+UI/SystemInfo/Layer1n2/FwVer_RLE.bin					0	255	307 127 125 55
+UI/SystemInfo/Layer1n2/LibVer_RLE.bin					0	255	307 198 125 55
+UI/SystemInfo/Layer1n2/SensorId_RLE.bin					0	255	307 269 125 55
+UI/SystemInfo/Layer1n2/IspVer_RLE.bin					0	255	307 340 125 55
+UI/SystemInfo/Layer3/_LUT_SystemInfo_Layer3.bin			255	
+UI/SystemInfo/Layer3/SystemInfo_Menu_RLE.bin			0	255	35 35 256 440
+UI/Trigger/Layer1n2/_LUT_Trigger_Layer1n2.bin			255
+UI/Trigger/Layer1n2/ReverseSignal_Sel_RLE.bin			0	255	48 122 230 64
+UI/Trigger/Layer1n2/ReverseViewMode_Sel_RLE.bin			0	255	48 193 230 64
+UI/Trigger/Layer1n2/TurnSignal_Sel_RLE.bin				0	255	48 264 230 64
+UI/Trigger/Layer1n2/TurnViewMode_Sel_RLE.bin			0	255	48 335 230 64
+UI/Trigger/Layer1n2/EmergencySignal_Sel_RLE.bin			0	255	48 406 230 64
+UI/Trigger/Layer1n2/EmergencyViewMode_Sel_RLE.bin		0	255	48 477 230 64
+UI/Trigger/Layer1n2/TriggerBack_Sel_RLE.bin				0	255	48 563 230 40
+UI/Trigger/Layer1n2/TriggerSignal_Off_RLE.bin			0	255	307 127 276 55
+UI/Trigger/Layer1n2/TriggerSignal_Off_Sel_RLE.bin		0	255	307 127 276 55
+UI/Trigger/Layer1n2/TriggerSignal_On_RLE.bin			0	255	307 127 276 55
+UI/Trigger/Layer1n2/TriggerSignal_On_Sel_RLE.bin		0	255	307 127 276 55
+UI/Trigger/Layer1n2/TriggerView_t3db_RLE.bin			0	255	307 127 276 55
+UI/Trigger/Layer1n2/TriggerView_t3db_Sel_RLE.bin		0	255	307 127 276 55
+UI/Trigger/Layer1n2/TriggerView_t3df_RLE.bin			0	255	307 127 276 55
+UI/Trigger/Layer1n2/TriggerView_t3df_Sel_RLE.bin		0	255	307 127 276 55
+UI/Trigger/Layer1n2/TriggerView_t3dlf_RLE.bin			0	255	307 127 276 55
+UI/Trigger/Layer1n2/TriggerView_t3dlf_Sel_RLE.bin		0	255	307 127 276 55
+UI/Trigger/Layer1n2/TriggerView_t3dl_RLE.bin			0	255	307 127 276 55
+UI/Trigger/Layer1n2/TriggerView_t3dl_Sel_RLE.bin		0	255	307 127 276 55
+UI/Trigger/Layer1n2/TriggerView_t3drf_RLE.bin			0	255	307 127 276 55
+UI/Trigger/Layer1n2/TriggerView_t3drf_Sel_RLE.bin		0	255	307 127 276 55
+UI/Trigger/Layer1n2/TriggerView_t3dr_RLE.bin			0	255	307 127 276 55
+UI/Trigger/Layer1n2/TriggerView_t3dr_Sel_RLE.bin		0	255	307 127 276 55
+UI/Trigger/Layer1n2/TriggerView_tb_RLE.bin				0	255	307 127 276 55
+UI/Trigger/Layer1n2/TriggerView_tb_Sel_RLE.bin			0	255	307 127 276 55
+UI/Trigger/Layer1n2/TriggerView_tf_RLE.bin				0	255	307 127 276 55
+UI/Trigger/Layer1n2/TriggerView_tf_Sel_RLE.bin			0	255	307 127 276 55
+UI/Trigger/Layer3/_LUT_Trigger_Layer3.bin				255
+UI/Trigger/Layer3/Trigger_Menu_RLE.bin					0	255	35 35 256 581
+UI/Vehicle/Layer1n2/_LUT_Vehicle_Layer1n2.bin			255
+UI/Vehicle/Layer1n2/Pgl_Sel_RLE.bin						0	255	48 122 230 64
+UI/Vehicle/Layer1n2/DnmBlending_Sel_RLE.bin				0	255	48 193 230 64
+UI/Vehicle/Layer1n2/VehicleBack_Sel_RLE.bin				0	255	48 278 230 40
+UI/Vehicle/Layer1n2/Pgl_Off_RLE.bin						0	255	307 127 184 55
+UI/Vehicle/Layer1n2/Pgl_Off_Sel_RLE.bin					0	255	307 127 184 55
+UI/Vehicle/Layer1n2/Pgl_Rear_RLE.bin					0	255	307 127 184 55
+UI/Vehicle/Layer1n2/Pgl_Rear_Sel_RLE.bin				0	255	307 127 184 55
+UI/Vehicle/Layer1n2/Pgl_Always_RLE.bin					0	255	307 127 184 55
+UI/Vehicle/Layer1n2/Pgl_Always_Sel_RLE.bin				0	255	307 127 184 55
+UI/Vehicle/Layer1n2/DnmBlending_Off_RLE.bin				0	255	307 198 184 55
+UI/Vehicle/Layer1n2/DnmBlending_Off_Sel_RLE.bin			0	255	307 198 184 55
+UI/Vehicle/Layer1n2/DnmBlending_On_RLE.bin				0	255	307 198 184 55
+UI/Vehicle/Layer1n2/DnmBlending_On_Sel_RLE.bin			0	255	307 198 184 55
+UI/Vehicle/Layer3/_LUT_Vehicle_Layer3.bin				255
+UI/Vehicle/Layer3/Vehicle_Menu_RLE.bin					0	255	35 35 256 298
+UI/Video/Layer1n2/_LUT_Video_Layer1n2.bin				255
+UI/Video/Layer1n2/ScreenX_Sel_RLE.bin					0	255	48 122 230 64
+UI/Video/Layer1n2/ScreenY_Sel_RLE.bin					0	255	48 193 230 64
+UI/Video/Layer1n2/Brightness_Sel_RLE.bin				0	255	48 264 230 64
+UI/Video/Layer1n2/Contrast_Sel_RLE.bin					0	255	48 335 230 64
+UI/Video/Layer1n2/Saturation_Sel_RLE.bin				0	255	48 406 230 64
+UI/Video/Layer1n2/VideoBack_Sel_RLE.bin					0	255	48 492 230 40
+UI/Video/Layer1n2/Step_0_RLE.bin						0	255	307 127 268 57
+UI/Video/Layer1n2/Step_1_RLE.bin						0	255	307 127 268 57
+UI/Video/Layer1n2/Step_2_RLE.bin						0	255	307 127 268 57
+UI/Video/Layer1n2/Step_3_RLE.bin						0	255	307 127 268 57
+UI/Video/Layer1n2/Step_4_RLE.bin						0	255	307 127 268 57
+UI/Video/Layer1n2/Step_5_RLE.bin						0	255	307 127 268 57
+UI/Video/Layer1n2/Step_6_RLE.bin						0	255	307 127 268 57
+UI/Video/Layer1n2/Step_7_RLE.bin						0	255	307 127 268 57
+UI/Video/Layer1n2/Step_8_RLE.bin						0	255	307 127 268 57
+UI/Video/Layer1n2/Step_9_RLE.bin						0	255	307 127 268 57
+UI/Video/Layer1n2/Step_10_RLE.bin						0	255	307 127 268 57
+UI/Video/Layer1n2/Step_Sel_0_RLE.bin					0	255	307 127 268 57
+UI/Video/Layer1n2/Step_Sel_1_RLE.bin					0	255	307 127 268 57
+UI/Video/Layer1n2/Step_Sel_2_RLE.bin					0	255	307 127 268 57
+UI/Video/Layer1n2/Step_Sel_3_RLE.bin					0	255	307 127 268 57
+UI/Video/Layer1n2/Step_Sel_4_RLE.bin					0	255	307 127 268 57
+UI/Video/Layer1n2/Step_Sel_5_RLE.bin					0	255	307 127 268 57
+UI/Video/Layer1n2/Step_Sel_6_RLE.bin					0	255	307 127 268 57
+UI/Video/Layer1n2/Step_Sel_7_RLE.bin					0	255	307 127 268 57
+UI/Video/Layer1n2/Step_Sel_8_RLE.bin					0	255	307 127 268 57
+UI/Video/Layer1n2/Step_Sel_9_RLE.bin					0	255	307 127 268 57
+UI/Video/Layer1n2/Step_Sel_10_RLE.bin					0	255	307 127 268 57
+UI/Video/Layer3/_LUT_Video_Layer3.bin					255
+UI/Video/Layer3/Video_Menu_RLE.bin						0	255	35 35 256 511
+UI/Update/Layer1n2/_LUT_Update_Layer1n2.bin				255
+UI/Update/Layer1n2/Dialog_Update_RLE.bin				0	255	492 288 296 143
+UI/Update/Layer1n2/FactoryReset_Sel_RLE.bin				0	255	48 122 230 64
+UI/Update/Layer1n2/FwUpdate_Sel_RLE.bin					0	255	48 193 230 64
+UI/Update/Layer1n2/UpdateBack_Sel_RLE.bin				0	255	48 279 230 40
+UI/Update/Layer3/_LUT_Update_Layer3.bin					255
+UI/Update/Layer3/Update_Menu_RLE.bin					0	255	35 35 256 298

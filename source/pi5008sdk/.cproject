@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+	<storageModule moduleId="org.eclipse.cdt.core.settings">
+		<cconfiguration id="0.825708541">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="0.825708541" moduleId="org.eclipse.cdt.core.settings" name="Debug">
+				<macros>
+					<stringMacro name="CROSS_COMPILE" type="VALUE_TEXT" value="nds32le-elf-"/>
+					<stringMacro name="LD_TEMPLATE" type="VALUE_TEXT" value="nds32_template.txt"/>
+					<stringMacro name="SAG_SRCS" type="VALUE_TEXT" value="pi5008_sdk.sag"/>
+					<stringMacro name="LD_FILE_NAME" type="VALUE_TEXT" value="pixelplus.ld"/>
+				</macros>
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.Cygwin_PE" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GNU_ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactExtension="elf" artifactName="${ProjName}-debug" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe" description="" errorParsers="org.eclipse.cdt.core.GmakeErrorParser;org.eclipse.cdt.core.GLDErrorParser;org.eclipse.cdt.core.CWDLocator;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GASErrorParser" id="0.825708541" name="Debug" parent="org.eclipse.cdt.build.core.prefbase.cfg" postannouncebuildStep="" postbuildStep="${CROSS_COMPILE}objdump -x -d -C ${ProjName}-debug.elf &gt; ${ProjName}-debug.dasm &amp;&amp; ${CROSS_COMPILE}objcopy -S -O binary ${ProjName}-debug.elf ${ProjName}-debug.bin &amp;&amp; ${CROSS_COMPILE}objcopy -S -O binary ${ProjName}-debug.elf ../Image/main_firm_${ProjName}-debug.bin" preannouncebuildStep="" prebuildStep="nds_ldsag -t ${ProjDirPath}/${LD_TEMPLATE} ${ProjDirPath}/${SAG_SRCS} -o ${LD_FILE_NAME}">
+					<folderInfo id="0.825708541." name="/" resourcePath="">
+						<toolChain errorParsers="" id="cdt.managedbuild.toolchain.gnu.cygwin.base.973977797" name="Cygwin GCC" nonInternalBuilderId="org.eclipse.linuxtools.cdt.autotools.core.toolchain.builder" superClass="cdt.managedbuild.toolchain.gnu.cygwin.base" unusedChildren="cdt.managedbuild.tool.gnu.assembler.cygwin.base">
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.Cygwin_PE;org.eclipse.cdt.core.GNU_ELF" id="cdt.managedbuild.target.gnu.platform.cygwin.base.134123918" name="Debug Platform" osList="win32" superClass="cdt.managedbuild.target.gnu.platform.cygwin.base"/>
+							<builder autoBuildTarget="all" buildPath="${workspace_loc:/pi5008_rtos}/Debug" cleanBuildTarget="RM='rm -rf' clean" enableAutoBuild="false" enableCleanBuild="true" enabledIncrementalBuild="true" errorParsers="org.eclipse.cdt.core.GmakeErrorParser;org.eclipse.cdt.core.CWDLocator" id="cdt.managedbuild.builder.gnu.cross.1375086157" incrementalBuildTarget="all" keepEnvironmentInBuildfile="true" managedBuildOn="true" name="Gnu Make Builder" parallelBuildOn="true" parallelizationNumber="optimal" superClass="cdt.managedbuild.builder.gnu.cross"/>
+							<tool id="cdt.managedbuild.tool.gnu.c.linker.cygwin.base.389872761" name="Cygwin C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.cygwin.base"/>
+							<tool id="cdt.managedbuild.tool.gnu.archiver.cygwin.base.575591636" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.cygwin.base"/>
+							<tool command="${CROSS_COMPILE}gcc" commandLinePattern="${COMMAND} ${FLAGS} ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT} ${INPUTS}" errorParsers="org.eclipse.cdt.core.GCCErrorParser" id="cdt.managedbuild.tool.gnu.c.compiler.cygwin.base.232231196" name="Cygwin C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.cygwin.base">
+								<option id="gnu.c.compiler.option.dialect.std.427755502" name="Language standard" superClass="gnu.c.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.c.compiler.dialect.default" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.preprocessor.def.symbols.491328803" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" useByScannerDiscovery="false"/>
+								<option id="gnu.c.compiler.option.optimization.level.670676287" name="Optimization Level" superClass="gnu.c.compiler.option.optimization.level" useByScannerDiscovery="false" value="gnu.c.optimization.level.none" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.debugging.level.1609560176" name="Debug Level" superClass="gnu.c.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.max" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.misc.other.1396985759" name="Other flags" superClass="gnu.c.compiler.option.misc.other" useByScannerDiscovery="false" value="$(PI5008_OTHER_CFLAGS)" valueType="string"/>
+								<option id="gnu.c.compiler.option.include.files.2121337142" name="Include files (-include)" superClass="gnu.c.compiler.option.include.files" useByScannerDiscovery="false" valueType="includeFiles">
+									<listOptionValue builtIn="false" value="$(PI5008_INCLUDE_FILE)"/>
+								</option>
+								<option id="gnu.c.compiler.option.include.paths.1134214791" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
+									<listOptionValue builtIn="false" value="../source/$(PI5008_INCLUDE_DIR)"/>
+								</option>
+								<option id="gnu.c.compiler.option.warnings.wconversion.1299118290" name="Implicit conversion warnings (-Wconversion)" superClass="gnu.c.compiler.option.warnings.wconversion" useByScannerDiscovery="false" value="false" valueType="boolean"/>
+								<option id="gnu.c.compiler.option.warnings.extrawarn.642579950" name="Extra warnings (-Wextra)" superClass="gnu.c.compiler.option.warnings.extrawarn" useByScannerDiscovery="false" value="false" valueType="boolean"/>
+								<option id="gnu.c.compiler.option.preprocessor.undef.symbol.1873569584" name="Undefined symbols (-U)" superClass="gnu.c.compiler.option.preprocessor.undef.symbol" useByScannerDiscovery="false"/>
+								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.cygwin.585939030" superClass="cdt.managedbuild.tool.gnu.c.compiler.input.cygwin"/>
+							</tool>
+							<tool command="${CROSS_COMPILE}gcc" commandLinePattern="${COMMAND} ${FLAGS} ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT} ${INPUTS}" errorParsers="org.eclipse.cdt.core.GASErrorParser" id="cdt.managedbuild.tool.gnu.assembler.1018256239" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler">
+								<option id="gnu.both.asm.option.include.paths.714994360" name="Include paths (-I)" superClass="gnu.both.asm.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
+									<listOptionValue builtIn="false" value="../source/$(PI5008_INCLUDE_DIR)"/>
+								</option>
+								<option id="gnu.both.asm.option.flags.594048641" name="Assembler flags" superClass="gnu.both.asm.option.flags" useByScannerDiscovery="false" value="$(PI5008_OTHER_AFLAGS)" valueType="string"/>
+								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.863229421" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
+							</tool>
+							<tool command="${CROSS_COMPILE}g++" commandLinePattern="${COMMAND} ${FLAGS} ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT} ${INPUTS}" errorParsers="org.eclipse.cdt.core.GCCErrorParser" id="cdt.managedbuild.tool.gnu.cpp.compiler.cygwin.base.1005629981" name="Cygwin C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.cygwin.base">
+								<option id="gnu.cpp.compiler.option.dialect.std.1398490541" name="Language standard" superClass="gnu.cpp.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.cpp.compiler.dialect.default" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.option.include.paths.902924863" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
+									<listOptionValue builtIn="false" value="../source/$(PI5008_INCLUDE_DIR)"/>
+								</option>
+								<option id="gnu.cpp.compiler.option.include.files.910167866" name="Include files (-include)" superClass="gnu.cpp.compiler.option.include.files" useByScannerDiscovery="false" valueType="includeFiles">
+									<listOptionValue builtIn="false" value="$(PI5008_INCLUDE_FILE)"/>
+								</option>
+								<option id="gnu.cpp.compiler.option.debugging.codecov.1034897385" name="Generate gcov information (-ftest-coverage -fprofile-arcs)" superClass="gnu.cpp.compiler.option.debugging.codecov" useByScannerDiscovery="false"/>
+								<option id="gnu.cpp.compiler.option.preprocessor.def.1576757719" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" useByScannerDiscovery="false"/>
+								<option id="gnu.cpp.compiler.option.preprocessor.undef.2143726167" name="Undefined symbols (-U)" superClass="gnu.cpp.compiler.option.preprocessor.undef" useByScannerDiscovery="false"/>
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.cygwin.2049390646" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input.cygwin"/>
+							</tool>
+							<tool command="${CROSS_COMPILE}g++" commandLinePattern="${COMMAND} ${FLAGS} ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT} ${INPUTS}" errorParsers="org.eclipse.cdt.core.GLDErrorParser" id="cdt.managedbuild.tool.gnu.cpp.linker.cygwin.base.1819297642" name="Cygwin C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.cygwin.base">
+								<option id="gnu.cpp.link.option.nostart.1065094774" name="Do not use standard start files (-nostartfiles)" superClass="gnu.cpp.link.option.nostart" useByScannerDiscovery="false" value="false" valueType="boolean"/>
+								<option id="gnu.cpp.link.option.nostdlibs.1657817965" name="No startup or default libs (-nostdlib)" superClass="gnu.cpp.link.option.nostdlibs" useByScannerDiscovery="false" value="false" valueType="boolean"/>
+								<option id="gnu.cpp.link.option.flags.1485203783" name="Linker flags" superClass="gnu.cpp.link.option.flags" useByScannerDiscovery="false" value="$(PI5008_OTHER_LDFLAGS) -T&quot;${LD_FILE_NAME}&quot;" valueType="string"/>
+								<option id="gnu.cpp.link.option.libs.1892470809" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" useByScannerDiscovery="false" valueType="libs">
+									<listOptionValue builtIn="false" value="$(PI5008_LIB)"/>
+								</option>
+								<option id="gnu.cpp.link.option.paths.1439556399" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" useByScannerDiscovery="false" valueType="libPaths">
+									<listOptionValue builtIn="false" value="$(PI5008_LIB_DIR)"/>
+								</option>
+								<option id="gnu.cpp.link.option.userobjs.1460829869" name="Other objects" superClass="gnu.cpp.link.option.userobjs" useByScannerDiscovery="false"/>
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.993875808" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+							</tool>
+						</toolChain>
+					</folderInfo>
+					<fileInfo id="0.825708541.636219065" name="start.S" rcbsApplicability="disable" resourcePath="source/drivers/system/start.S" toolsToInvoke="cdt.managedbuild.tool.gnu.assembler.1816713822.1439505639">
+						<tool errorParsers="org.eclipse.cdt.core.GASErrorParser" id="cdt.managedbuild.tool.gnu.assembler.1816713822.1439505639" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.1018256239">
+							<option id="gnu.both.asm.option.include.paths.1244562172" name="Include paths (-I)" superClass="gnu.both.asm.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
+								<listOptionValue builtIn="false" value="../source/$(PI5008_INCLUDE_DIR)"/>
+							</option>
+							<inputType id="cdt.managedbuild.tool.gnu.assembler.input.1151539175" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
+						</tool>
+						<tool customBuildStep="true" id="org.eclipse.cdt.managedbuilder.ui.rcbs.469458534" name="Resource Custom Build Step">
+							<inputType id="org.eclipse.cdt.managedbuilder.ui.rcbs.inputtype.240913026" name="Resource Custom Build Step Input Type">
+								<additionalInput kind="additionalinputdependency" paths=""/>
+							</inputType>
+							<outputType id="org.eclipse.cdt.managedbuilder.ui.rcbs.outputtype.838374789" name="Resource Custom Build Step Output Type"/>
+						</tool>
+					</fileInfo>
+					<sourceEntries>
+						<entry excluding="source/os/kernel/Source/portable/MemMang/heap_3.c|source/os/kernel/Source/portable/MemMang/heap_2.c|source/os/kernel/Source/portable/MemMang/heap_1.c|source/freertos/kernel/Source/portable/MemMang/heap_3.c|source/freertos/kernel/Source/portable/MemMang/heap_1.c|source/applications/engine/poweroff_callbacks.c|source/applications/engine/sys_callbacks.c|source/applications/engine/factory_callbacks.c|source/freertos/hal|source/applications/engine/factory_autotest_callbacks.c|source/freertos/kernel/Source/portable/MemMang/heap_2.c" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name=""/>
+					</sourceEntries>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+		<cconfiguration id="0.825708541.2061338318">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="0.825708541.2061338318" moduleId="org.eclipse.cdt.core.settings" name="Release">
+				<macros>
+					<stringMacro name="CROSS_COMPILE" type="VALUE_TEXT" value="nds32le-elf-"/>
+					<stringMacro name="LD_TEMPLATE" type="VALUE_TEXT" value="nds32_template.txt"/>
+					<stringMacro name="SAG_SRCS" type="VALUE_TEXT" value="pixelplus.sag"/>
+					<stringMacro name="LD_FILE_NAME" type="VALUE_TEXT" value="pixelplus.ld"/>
+				</macros>
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.Cygwin_PE" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GNU_ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactExtension="elf" artifactName="${ProjName}-release" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe" description="" errorParsers="org.eclipse.cdt.core.GmakeErrorParser;org.eclipse.cdt.core.GLDErrorParser;org.eclipse.cdt.core.CWDLocator;org.eclipse.cdt.core.GCCErrorParser" id="0.825708541.2061338318" name="Release" parent="org.eclipse.cdt.build.core.prefbase.cfg" postannouncebuildStep="" postbuildStep="${CROSS_COMPILE}objdump -x -d -C ${ProjName}-release.elf &gt; ${ProjName}-release.dasm &amp;&amp; ${CROSS_COMPILE}objcopy -S -O binary ${ProjName}-release.elf ${ProjName}-release.bin" preannouncebuildStep="" prebuildStep="nds_ldsag -t ${ProjDirPath}/${LD_TEMPLATE} ${ProjDirPath}/${SAG_SRCS} -o ${LD_FILE_NAME}">
+					<folderInfo id="0.825708541.2061338318." name="/" resourcePath="">
+						<toolChain errorParsers="" id="cdt.managedbuild.toolchain.gnu.cygwin.base.655726773" name="Cygwin GCC" nonInternalBuilderId="org.eclipse.linuxtools.cdt.autotools.core.toolchain.builder" superClass="cdt.managedbuild.toolchain.gnu.cygwin.base" unusedChildren="cdt.managedbuild.tool.gnu.assembler.cygwin.base">
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.Cygwin_PE;org.eclipse.cdt.core.GNU_ELF" id="cdt.managedbuild.target.gnu.platform.cygwin.base.1594678821" name="Debug Platform" osList="win32" superClass="cdt.managedbuild.target.gnu.platform.cygwin.base"/>
+							<builder buildPath="${workspace_loc:/pi5008_rtos}/Debug" cleanBuildTarget="RM='rm -rf' clean" id="cdt.managedbuild.builder.gnu.cross.1109902750" keepEnvironmentInBuildfile="true" name="Gnu Make Builder" superClass="cdt.managedbuild.builder.gnu.cross"/>
+							<tool id="cdt.managedbuild.tool.gnu.c.linker.cygwin.base.818734164" name="Cygwin C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.cygwin.base"/>
+							<tool id="cdt.managedbuild.tool.gnu.archiver.cygwin.base.49147078" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.cygwin.base"/>
+							<tool command="${CROSS_COMPILE}gcc" commandLinePattern="${COMMAND} ${FLAGS} ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT} ${INPUTS}" errorParsers="org.eclipse.cdt.core.GCCErrorParser" id="cdt.managedbuild.tool.gnu.c.compiler.cygwin.base.1354337405" name="Cygwin C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.cygwin.base">
+								<option id="gnu.c.compiler.option.dialect.std.674252345" name="Language standard" superClass="gnu.c.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.c.compiler.dialect.default" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.preprocessor.def.symbols.2039114924" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" useByScannerDiscovery="false" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="PI5008"/>
+									<listOptionValue builtIn="false" value="CONFIG_OS_FREERTOS"/>
+								</option>
+								<option id="gnu.c.compiler.option.optimization.level.1636375813" name="Optimization Level" superClass="gnu.c.compiler.option.optimization.level" useByScannerDiscovery="false" value="gnu.c.optimization.level.most" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.debugging.level.1201855932" name="Debug Level" superClass="gnu.c.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.minimal" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.misc.other.1879736812" name="Other flags" superClass="gnu.c.compiler.option.misc.other" useByScannerDiscovery="false" value="-c -fmessage-length=0 -mcmodel=large -mcpu=d1088-spu -fno-builtin -fomit-frame-pointer  -funroll-loops -nostdlib -fno-strict-aliasing  -ffunction-sections -fsingle-precision-constant" valueType="string"/>
+								<option id="gnu.c.compiler.option.include.files.1299829430" name="Include files (-include)" superClass="gnu.c.compiler.option.include.files" useByScannerDiscovery="false" valueType="includeFiles">
+									<listOptionValue builtIn="false" value="../source/drivers/system/pi5008_config.h"/>
+								</option>
+								<option id="gnu.c.compiler.option.include.paths.892094840" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
+									<listOptionValue builtIn="false" value="../source/freertos/kernel/Source/include"/>
+									<listOptionValue builtIn="false" value="../source/drivers/spi"/>
+									<listOptionValue builtIn="false" value="../source/freertos"/>
+									<listOptionValue builtIn="false" value="../source/freertos/hal"/>
+									<listOptionValue builtIn="false" value="../source/freertos/nds32"/>
+									<listOptionValue builtIn="false" value="../source/common"/>
+									<listOptionValue builtIn="false" value="../source/osal"/>
+									<listOptionValue builtIn="false" value="../source/drivers/include"/>
+									<listOptionValue builtIn="false" value="../source/drivers/system"/>
+									<listOptionValue builtIn="false" value="../source/drivers/isp"/>
+									<listOptionValue builtIn="false" value="../source/applications"/>
+									<listOptionValue builtIn="false" value="../source/applications/engine"/>
+									<listOptionValue builtIn="false" value="../source/applications/engine/include"/>
+									<listOptionValue builtIn="false" value="../source"/>
+									<listOptionValue builtIn="false" value="C:/Andestech/BSPv421/toolchains/nds32le-elf-mculib-v3s/lib/gcc/nds32le-elf/4.9.4/include"/>
+									<listOptionValue builtIn="false" value="C:/Andestech/BSPv421/toolchains/nds32le-elf-mculib-v3s/lib/gcc/nds32le-elf/4.9.4/include-fixed"/>
+									<listOptionValue builtIn="false" value="C:/Andestech/BSPv421/toolchains/nds32le-elf-mculib-v3s/nds32le-elf/include"/>
+									<listOptionValue builtIn="false" value="&quot;C:\Andestech\BSPv421\toolchains\nds32le-elf-mculib-v3s\nds32le-elf\include&quot;"/>
+									<listOptionValue builtIn="false" value="C:/Andestech/BSPv421/toolchains/nds32le-elf-mculib-v3s/nds32le-elf/include/c++/4.9.4/backward"/>
+									<listOptionValue builtIn="false" value="C:/Andestech/BSPv421/toolchains/nds32le-elf-mculib-v3s/nds32le-elf/include/c++/4.9.4/nds32le-elf"/>
+									<listOptionValue builtIn="false" value="C:/Andestech/BSPv421/toolchains/nds32le-elf-mculib-v3s/nds32le-elf/sys-include"/>
+								</option>
+								<option id="gnu.c.compiler.option.warnings.toerrors.2089010968" name="Warnings as errors (-Werror)" superClass="gnu.c.compiler.option.warnings.toerrors" useByScannerDiscovery="false" value="false" valueType="boolean"/>
+								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.cygwin.727245820" superClass="cdt.managedbuild.tool.gnu.c.compiler.input.cygwin"/>
+							</tool>
+							<tool command="${CROSS_COMPILE}gcc" id="cdt.managedbuild.tool.gnu.assembler.1781465940" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler">
+								<option id="gnu.both.asm.option.include.paths.2008790629" name="Include paths (-I)" superClass="gnu.both.asm.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
+									<listOptionValue builtIn="false" value="../source/freertos/kernel/Source/include"/>
+									<listOptionValue builtIn="false" value="../source/freertos"/>
+									<listOptionValue builtIn="false" value="../source/freertos/hal"/>
+									<listOptionValue builtIn="false" value="../source/freertos/nds32"/>
+									<listOptionValue builtIn="false" value="../source/common"/>
+									<listOptionValue builtIn="false" value="../source/hal"/>
+									<listOptionValue builtIn="false" value="../source/drivers"/>
+									<listOptionValue builtIn="false" value="../source/drivers/system"/>
+									<listOptionValue builtIn="false" value="../source/drivers/dma"/>
+									<listOptionValue builtIn="false" value="../source/drivers/du"/>
+									<listOptionValue builtIn="false" value="../source/drivers/gpio"/>
+									<listOptionValue builtIn="false" value="../source/drivers/i2c"/>
+									<listOptionValue builtIn="false" value="../source/drivers/isp"/>
+									<listOptionValue builtIn="false" value="../source/drivers/svm"/>
+									<listOptionValue builtIn="false" value="../source/drivers/timer"/>
+									<listOptionValue builtIn="false" value="../source/drivers/uart"/>
+									<listOptionValue builtIn="false" value="../source/drivers/vpu"/>
+									<listOptionValue builtIn="false" value="../source/applications"/>
+									<listOptionValue builtIn="false" value="../source/applications/engine"/>
+									<listOptionValue builtIn="false" value="../source/applications/engine/include"/>
+									<listOptionValue builtIn="false" value="../source/applications/unittest"/>
+									<listOptionValue builtIn="false" value="../source"/>
+									<listOptionValue builtIn="false" value="C:/Andestech/BSPv421/toolchains/nds32le-elf-mculib-v3s/lib/gcc/nds32le-elf/4.9.4/include"/>
+									<listOptionValue builtIn="false" value="C:/Andestech/BSPv421/toolchains/nds32le-elf-mculib-v3s/lib/gcc/nds32le-elf/4.9.4/include-fixed"/>
+									<listOptionValue builtIn="false" value="C:/Andestech/BSPv421/toolchains/nds32le-elf-mculib-v3s/nds32le-elf/include"/>
+									<listOptionValue builtIn="false" value="&quot;C:\Andestech\BSPv421\toolchains\nds32le-elf-mculib-v3s\nds32le-elf\include&quot;"/>
+									<listOptionValue builtIn="false" value="C:/Andestech/BSPv421/toolchains/nds32le-elf-mculib-v3s/nds32le-elf/include/c++/4.9.4/backward"/>
+									<listOptionValue builtIn="false" value="C:/Andestech/BSPv421/toolchains/nds32le-elf-mculib-v3s/nds32le-elf/include/c++/4.9.4/nds32le-elf"/>
+									<listOptionValue builtIn="false" value="C:/Andestech/BSPv421/toolchains/nds32le-elf-mculib-v3s/nds32le-elf/sys-include"/>
+								</option>
+								<option id="gnu.both.asm.option.flags.174540223" name="Assembler flags" superClass="gnu.both.asm.option.flags" useByScannerDiscovery="false" value="$(PI5008_OTHER_AFLAGS)" valueType="string"/>
+								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.1654060995" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
+							</tool>
+							<tool command="${CROSS_COMPILE}g++" commandLinePattern="${COMMAND} ${FLAGS} ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT} ${INPUTS}" errorParsers="org.eclipse.cdt.core.GCCErrorParser" id="cdt.managedbuild.tool.gnu.cpp.compiler.cygwin.base.1954854894" name="Cygwin C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.cygwin.base">
+								<option id="gnu.cpp.compiler.option.dialect.std.1382229391" name="Language standard" superClass="gnu.cpp.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.cpp.compiler.dialect.default" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.option.include.paths.1315914913" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
+									<listOptionValue builtIn="false" value="../source/freertos/kernel/Source/include"/>
+									<listOptionValue builtIn="false" value="../source/drivers/spi"/>
+									<listOptionValue builtIn="false" value="../source/freertos"/>
+									<listOptionValue builtIn="false" value="../source/freertos/hal"/>
+									<listOptionValue builtIn="false" value="../source/freertos/nds32"/>
+									<listOptionValue builtIn="false" value="../source/common"/>
+									<listOptionValue builtIn="false" value="../source/osal"/>
+									<listOptionValue builtIn="false" value="../source/drivers/include"/>
+									<listOptionValue builtIn="false" value="../source/drivers/system"/>
+									<listOptionValue builtIn="false" value="../source/drivers/isp"/>
+									<listOptionValue builtIn="false" value="../source/applications"/>
+									<listOptionValue builtIn="false" value="../source/applications/engine"/>
+									<listOptionValue builtIn="false" value="../source/applications/engine/include"/>
+									<listOptionValue builtIn="false" value="../source"/>
+									<listOptionValue builtIn="false" value="C:/Andestech/BSPv421/toolchains/nds32le-elf-mculib-v3s/lib/gcc/nds32le-elf/4.9.4/include"/>
+									<listOptionValue builtIn="false" value="C:/Andestech/BSPv421/toolchains/nds32le-elf-mculib-v3s/lib/gcc/nds32le-elf/4.9.4/include-fixed"/>
+									<listOptionValue builtIn="false" value="C:/Andestech/BSPv421/toolchains/nds32le-elf-mculib-v3s/nds32le-elf/include"/>
+									<listOptionValue builtIn="false" value="&quot;C:\Andestech\BSPv421\toolchains\nds32le-elf-mculib-v3s\nds32le-elf\include&quot;"/>
+									<listOptionValue builtIn="false" value="C:/Andestech/BSPv421/toolchains/nds32le-elf-mculib-v3s/nds32le-elf/include/c++/4.9.4/backward"/>
+									<listOptionValue builtIn="false" value="C:/Andestech/BSPv421/toolchains/nds32le-elf-mculib-v3s/nds32le-elf/include/c++/4.9.4/nds32le-elf"/>
+									<listOptionValue builtIn="false" value="C:/Andestech/BSPv421/toolchains/nds32le-elf-mculib-v3s/nds32le-elf/sys-include"/>
+								</option>
+								<option id="gnu.cpp.compiler.option.include.files.1553546535" name="Include files (-include)" superClass="gnu.cpp.compiler.option.include.files" useByScannerDiscovery="false" valueType="includeFiles">
+									<listOptionValue builtIn="false" value="../source/drivers/system/pi5008_config.h"/>
+								</option>
+								<option id="gnu.cpp.compiler.option.debugging.codecov.691398859" name="Generate gcov information (-ftest-coverage -fprofile-arcs)" superClass="gnu.cpp.compiler.option.debugging.codecov" useByScannerDiscovery="false"/>
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.cygwin.988968806" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input.cygwin"/>
+							</tool>
+							<tool command="${CROSS_COMPILE}gcc" commandLinePattern="${COMMAND} ${FLAGS} ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT} ${INPUTS}" errorParsers="org.eclipse.cdt.core.GLDErrorParser" id="cdt.managedbuild.tool.gnu.cpp.linker.cygwin.base.1130833905" name="Cygwin C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.cygwin.base">
+								<option id="gnu.cpp.link.option.nostart.1816882871" name="Do not use standard start files (-nostartfiles)" superClass="gnu.cpp.link.option.nostart" useByScannerDiscovery="false" value="false" valueType="boolean"/>
+								<option id="gnu.cpp.link.option.nostdlibs.551428821" name="No startup or default libs (-nostdlib)" superClass="gnu.cpp.link.option.nostdlibs" useByScannerDiscovery="false" value="false" valueType="boolean"/>
+								<option id="gnu.cpp.link.option.flags.796054882" name="Linker flags" superClass="gnu.cpp.link.option.flags" useByScannerDiscovery="false" value="../source/drivers/system/pi5008_config.h -O0 -g3 -mcmodel=large -nostartfiles -fno-builtin -static -Wl,--gc-sections -mext-dsp -T&quot;${LD_FILE_NAME}&quot; -mvh" valueType="string"/>
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.1626937234" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+							</tool>
+						</toolChain>
+					</folderInfo>
+					<sourceEntries>
+						<entry excluding="source/applications/lib/SvmView/pcvAlloc.cpp|source/applications/lib/SvmView_v0.20.00|source/applications/lib/OffLineCalib_v0.10.00|source/os/kernel/Source/portable/MemMang/heap_3.c|source/os/kernel/Source/portable/MemMang/heap_2.c|source/os/kernel/Source/portable/MemMang/heap_1.c|source/lib/OffLineCalib_v0.10.00/pcvAlloc.cpp|source/lib/SvmView_v0.20.00|source/freertos/kernel/Source/portable/MemMang/heap_3.c|source/freertos/kernel/Source/portable/MemMang/heap_1.c|source/applications/engine/poweroff_callbacks.c|source/lib/OffLineCalib/pcvAlloc.cpp|source/lib/SvmView_v0.20.00/pcvAlloc.cpp|source/applications/engine/sys_callbacks.c|source/applications/engine/factory_callbacks.c|source/lib/OffLineCalib_v0.10.00|source/lib/SvmView/pcvAlloc.cpp|source/freertos/hal|source/applications/engine/factory_autotest_callbacks.c|source/freertos/kernel/Source/portable/MemMang/heap_2.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+					</sourceEntries>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+		<cconfiguration id="0.825708541.1312252759">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="0.825708541.1312252759" moduleId="org.eclipse.cdt.core.settings" name="LGIT_Rel">
+				<macros>
+					<stringMacro name="CROSS_COMPILE" type="VALUE_TEXT" value="nds32le-elf-"/>
+					<stringMacro name="LD_TEMPLATE" type="VALUE_TEXT" value="nds32_template.txt"/>
+					<stringMacro name="SAG_SRCS" type="VALUE_TEXT" value="pixelplus_tas.sag"/>
+					<stringMacro name="LD_FILE_NAME" type="VALUE_TEXT" value="pixelplus.ld"/>
+				</macros>
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.Cygwin_PE" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GNU_ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactExtension="elf" artifactName="${ProjName}-debug" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe" description="" errorParsers="org.eclipse.cdt.core.GmakeErrorParser;org.eclipse.cdt.core.GLDErrorParser;org.eclipse.cdt.core.CWDLocator;org.eclipse.cdt.core.GCCErrorParser" id="0.825708541.1312252759" name="LGIT_Rel" parent="org.eclipse.cdt.build.core.prefbase.cfg" postannouncebuildStep="" postbuildStep="${CROSS_COMPILE}objdump -x -d -C ${ProjName}-debug.elf &gt; ${ProjName}-debug.dasm &amp;&amp; ${CROSS_COMPILE}objcopy -S -O binary ${ProjName}-debug.elf ${ProjName}-debug.bin" preannouncebuildStep="" prebuildStep="nds_ldsag -t ${ProjDirPath}/${LD_TEMPLATE} ${ProjDirPath}/${SAG_SRCS} -o ${LD_FILE_NAME}">
+					<folderInfo id="0.825708541.1312252759." name="/" resourcePath="">
+						<toolChain errorParsers="" id="cdt.managedbuild.toolchain.gnu.cygwin.base.1469830757" name="Cygwin GCC" nonInternalBuilderId="org.eclipse.linuxtools.cdt.autotools.core.toolchain.builder" superClass="cdt.managedbuild.toolchain.gnu.cygwin.base" unusedChildren="cdt.managedbuild.tool.gnu.assembler.cygwin.base">
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.Cygwin_PE;org.eclipse.cdt.core.GNU_ELF" id="cdt.managedbuild.target.gnu.platform.cygwin.base.2033616988" name="Debug Platform" osList="win32" superClass="cdt.managedbuild.target.gnu.platform.cygwin.base"/>
+							<builder buildPath="${workspace_loc:/pi5008_rtos}/Debug" cleanBuildTarget="RM='rm -rf' clean" id="cdt.managedbuild.builder.gnu.cross.120381373" keepEnvironmentInBuildfile="true" name="Gnu Make Builder" parallelBuildOn="true" parallelizationNumber="optimal" superClass="cdt.managedbuild.builder.gnu.cross"/>
+							<tool id="cdt.managedbuild.tool.gnu.c.linker.cygwin.base.1058291065" name="Cygwin C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.cygwin.base"/>
+							<tool id="cdt.managedbuild.tool.gnu.archiver.cygwin.base.95273848" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.cygwin.base"/>
+							<tool command="${CROSS_COMPILE}gcc" commandLinePattern="${COMMAND} ${FLAGS} ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT} ${INPUTS}" errorParsers="org.eclipse.cdt.core.GCCErrorParser" id="cdt.managedbuild.tool.gnu.c.compiler.cygwin.base.1650121800" name="Cygwin C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.cygwin.base">
+								<option id="gnu.c.compiler.option.dialect.std.326185073" name="Language standard" superClass="gnu.c.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.c.compiler.dialect.default" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.preprocessor.def.symbols.1860053458" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" useByScannerDiscovery="false"/>
+								<option id="gnu.c.compiler.option.optimization.level.2001419158" name="Optimization Level" superClass="gnu.c.compiler.option.optimization.level" useByScannerDiscovery="false" value="gnu.c.optimization.level.none" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.debugging.level.2017720435" name="Debug Level" superClass="gnu.c.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.max" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.misc.other.1192863853" name="Other flags" superClass="gnu.c.compiler.option.misc.other" useByScannerDiscovery="false" value="-c -fmessage-length=0 -Wno-unused-function -Werror-implicit-function-declaration -mcmodel=large -mcpu=d1088-spu -fno-builtin -fomit-frame-pointer  -funroll-loops -nostdlib -fno-strict-aliasing  -ffunction-sections -fsingle-precision-constant" valueType="string"/>
+								<option id="gnu.c.compiler.option.include.files.686082466" name="Include files (-include)" superClass="gnu.c.compiler.option.include.files" useByScannerDiscovery="false" valueType="includeFiles">
+									<listOptionValue builtIn="false" value="../source/drivers/system/pi5008_config.h"/>
+								</option>
+								<option id="gnu.c.compiler.option.include.paths.517434670" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
+									<listOptionValue builtIn="false" value="../source/applications"/>
+									<listOptionValue builtIn="false" value="../source/applications/engine/include"/>
+									<listOptionValue builtIn="false" value="../source/common"/>
+									<listOptionValue builtIn="false" value="../source/config"/>
+									<listOptionValue builtIn="false" value="../source/drivers/include"/>
+									<listOptionValue builtIn="false" value="../source/drivers/system"/>
+									<listOptionValue builtIn="false" value="../source/freertos"/>
+									<listOptionValue builtIn="false" value="../source/freertos/kernel/Source/include"/>
+									<listOptionValue builtIn="false" value="../source/freertos/nds32"/>
+									<listOptionValue builtIn="false" value="../source/osal"/>
+									<listOptionValue builtIn="false" value="../source/unittest"/>
+									<listOptionValue builtIn="false" value="C:/Andestech/BSPv421/toolchains/nds32le-elf-mculib-v3s/nds32le-elf/include"/>
+									<listOptionValue builtIn="false" value="&quot;C:\Andestech\BSPv421\toolchains\nds32le-elf-mculib-v3s\nds32le-elf\include&quot;"/>
+									<listOptionValue builtIn="false" value="C:/Andestech/BSPv421/toolchains/nds32le-elf-mculib-v3s/nds32le-elf/sys-include"/>
+									<listOptionValue builtIn="false" value="C:/Andestech/BSPv421/toolchains/nds32le-elf-mculib-v3s/lib/gcc/nds32le-elf/4.9.4/include"/>
+									<listOptionValue builtIn="false" value="C:/Andestech/BSPv421/toolchains/nds32le-elf-mculib-v3s/lib/gcc/nds32le-elf/4.9.4/include-fixed"/>
+									<listOptionValue builtIn="false" value="C:/Andestech/BSPv421/toolchains/nds32le-elf-mculib-v3s/nds32le-elf/include/c++/4.9.4/backward"/>
+									<listOptionValue builtIn="false" value="C:/Andestech/BSPv421/toolchains/nds32le-elf-mculib-v3s/nds32le-elf/include/c++/4.9.4/nds32le-elf"/>
+								</option>
+								<option id="gnu.c.compiler.option.warnings.wconversion.243364071" name="Implicit conversion warnings (-Wconversion)" superClass="gnu.c.compiler.option.warnings.wconversion" useByScannerDiscovery="false" value="false" valueType="boolean"/>
+								<option id="gnu.c.compiler.option.warnings.extrawarn.1836006080" name="Extra warnings (-Wextra)" superClass="gnu.c.compiler.option.warnings.extrawarn" useByScannerDiscovery="false" value="false" valueType="boolean"/>
+								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.cygwin.50867657" superClass="cdt.managedbuild.tool.gnu.c.compiler.input.cygwin"/>
+							</tool>
+							<tool command="${CROSS_COMPILE}gcc" id="cdt.managedbuild.tool.gnu.assembler.152301257" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler">
+								<option id="gnu.both.asm.option.include.paths.576069265" name="Include paths (-I)" superClass="gnu.both.asm.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
+									<listOptionValue builtIn="false" value="../source/applications"/>
+									<listOptionValue builtIn="false" value="../source/applications/engine/include"/>
+									<listOptionValue builtIn="false" value="../source/common"/>
+									<listOptionValue builtIn="false" value="../source/config"/>
+									<listOptionValue builtIn="false" value="../source/drivers/include"/>
+									<listOptionValue builtIn="false" value="../source/drivers/system"/>
+									<listOptionValue builtIn="false" value="../source/freertos"/>
+									<listOptionValue builtIn="false" value="../source/freertos/kernel/Source/include"/>
+									<listOptionValue builtIn="false" value="../source/freertos/nds32"/>
+									<listOptionValue builtIn="false" value="../source/osal"/>
+									<listOptionValue builtIn="false" value="../source/unittest"/>
+									<listOptionValue builtIn="false" value="C:/Andestech/BSPv421/toolchains/nds32le-elf-mculib-v3s/nds32le-elf/include"/>
+									<listOptionValue builtIn="false" value="&quot;C:\Andestech\BSPv421\toolchains\nds32le-elf-mculib-v3s\nds32le-elf\include&quot;"/>
+									<listOptionValue builtIn="false" value="C:/Andestech/BSPv421/toolchains/nds32le-elf-mculib-v3s/nds32le-elf/sys-include"/>
+									<listOptionValue builtIn="false" value="C:/Andestech/BSPv421/toolchains/nds32le-elf-mculib-v3s/lib/gcc/nds32le-elf/4.9.4/include"/>
+									<listOptionValue builtIn="false" value="C:/Andestech/BSPv421/toolchains/nds32le-elf-mculib-v3s/lib/gcc/nds32le-elf/4.9.4/include-fixed"/>
+									<listOptionValue builtIn="false" value="C:/Andestech/BSPv421/toolchains/nds32le-elf-mculib-v3s/nds32le-elf/include/c++/4.9.4/backward"/>
+									<listOptionValue builtIn="false" value="C:/Andestech/BSPv421/toolchains/nds32le-elf-mculib-v3s/nds32le-elf/include/c++/4.9.4/nds32le-elf"/>
+								</option>
+								<option id="gnu.both.asm.option.flags.1789189055" name="Assembler flags" superClass="gnu.both.asm.option.flags" useByScannerDiscovery="false" value="$(PI5008_OTHER_AFLAGS)" valueType="string"/>
+								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.1379798132" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
+							</tool>
+							<tool command="${CROSS_COMPILE}g++" commandLinePattern="${COMMAND} ${FLAGS} ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT} ${INPUTS}" errorParsers="org.eclipse.cdt.core.GCCErrorParser" id="cdt.managedbuild.tool.gnu.cpp.compiler.cygwin.base.1462941909" name="Cygwin C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.cygwin.base">
+								<option id="gnu.cpp.compiler.option.dialect.std.509671526" name="Language standard" superClass="gnu.cpp.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.cpp.compiler.dialect.default" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.option.include.paths.1380540340" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
+									<listOptionValue builtIn="false" value="../source/applications"/>
+									<listOptionValue builtIn="false" value="../source/applications/engine/include"/>
+									<listOptionValue builtIn="false" value="../source/common"/>
+									<listOptionValue builtIn="false" value="../source/config"/>
+									<listOptionValue builtIn="false" value="../source/drivers/include"/>
+									<listOptionValue builtIn="false" value="../source/drivers/system"/>
+									<listOptionValue builtIn="false" value="../source/freertos"/>
+									<listOptionValue builtIn="false" value="../source/freertos/kernel/Source/include"/>
+									<listOptionValue builtIn="false" value="../source/freertos/nds32"/>
+									<listOptionValue builtIn="false" value="../source/osal"/>
+									<listOptionValue builtIn="false" value="../source/unittest"/>
+									<listOptionValue builtIn="false" value="C:/Andestech/BSPv421/toolchains/nds32le-elf-mculib-v3s/nds32le-elf/include"/>
+									<listOptionValue builtIn="false" value="&quot;C:\Andestech\BSPv421\toolchains\nds32le-elf-mculib-v3s\nds32le-elf\include&quot;"/>
+									<listOptionValue builtIn="false" value="C:/Andestech/BSPv421/toolchains/nds32le-elf-mculib-v3s/nds32le-elf/sys-include"/>
+									<listOptionValue builtIn="false" value="C:/Andestech/BSPv421/toolchains/nds32le-elf-mculib-v3s/lib/gcc/nds32le-elf/4.9.4/include"/>
+									<listOptionValue builtIn="false" value="C:/Andestech/BSPv421/toolchains/nds32le-elf-mculib-v3s/lib/gcc/nds32le-elf/4.9.4/include-fixed"/>
+									<listOptionValue builtIn="false" value="C:/Andestech/BSPv421/toolchains/nds32le-elf-mculib-v3s/nds32le-elf/include/c++/4.9.4/backward"/>
+									<listOptionValue builtIn="false" value="C:/Andestech/BSPv421/toolchains/nds32le-elf-mculib-v3s/nds32le-elf/include/c++/4.9.4/nds32le-elf"/>
+								</option>
+								<option id="gnu.cpp.compiler.option.include.files.1779964460" name="Include files (-include)" superClass="gnu.cpp.compiler.option.include.files" useByScannerDiscovery="false" valueType="includeFiles">
+									<listOptionValue builtIn="false" value="../source/drivers/system/pi5008_config.h"/>
+								</option>
+								<option id="gnu.cpp.compiler.option.debugging.codecov.1844593503" name="Generate gcov information (-ftest-coverage -fprofile-arcs)" superClass="gnu.cpp.compiler.option.debugging.codecov" useByScannerDiscovery="false"/>
+								<option id="gnu.cpp.compiler.option.preprocessor.def.2026844585" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" useByScannerDiscovery="false"/>
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.cygwin.1215236393" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input.cygwin"/>
+							</tool>
+							<tool command="${CROSS_COMPILE}gcc" commandLinePattern="${COMMAND} ${FLAGS} ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT} ${INPUTS}" errorParsers="org.eclipse.cdt.core.GLDErrorParser" id="cdt.managedbuild.tool.gnu.cpp.linker.cygwin.base.1565951488" name="Cygwin C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.cygwin.base">
+								<option id="gnu.cpp.link.option.nostart.1483872510" name="Do not use standard start files (-nostartfiles)" superClass="gnu.cpp.link.option.nostart" useByScannerDiscovery="false" value="false" valueType="boolean"/>
+								<option id="gnu.cpp.link.option.nostdlibs.1437176206" name="No startup or default libs (-nostdlib)" superClass="gnu.cpp.link.option.nostdlibs" useByScannerDiscovery="false" value="false" valueType="boolean"/>
+								<option id="gnu.cpp.link.option.flags.821782176" name="Linker flags" superClass="gnu.cpp.link.option.flags" useByScannerDiscovery="false" value="../source/drivers/system/pi5008_config.h -O0 -g3 -mcmodel=large -nostartfiles -fno-builtin -static -Wl,--gc-sections -mext-dsp -T&quot;${LD_FILE_NAME}&quot; -mvh" valueType="string"/>
+								<option id="gnu.cpp.link.option.libs.1335245081" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" useByScannerDiscovery="false" valueType="libs">
+									<listOptionValue builtIn="false" value="m"/>
+								</option>
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.260313560" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+							</tool>
+						</toolChain>
+					</folderInfo>
+					<sourceEntries>
+						<entry excluding="source/applications/lib/SvmView/pcvAlloc.cpp|source/applications/lib/SvmView_v0.20.00|source/applications/lib/OffLineCalib_v0.10.00|source/os/kernel/Source/portable/MemMang/heap_3.c|source/os/kernel/Source/portable/MemMang/heap_2.c|source/os/kernel/Source/portable/MemMang/heap_1.c|source/lib/OffLineCalib_v0.10.00/pcvAlloc.cpp|source/lib/SvmView_v0.20.00|source/freertos/kernel/Source/portable/MemMang/heap_3.c|source/freertos/kernel/Source/portable/MemMang/heap_1.c|source/applications/engine/poweroff_callbacks.c|source/lib/OffLineCalib/pcvAlloc.cpp|source/lib/SvmView_v0.20.00/pcvAlloc.cpp|source/applications/engine/sys_callbacks.c|source/applications/engine/factory_callbacks.c|source/lib/OffLineCalib_v0.10.00|source/lib/SvmView/pcvAlloc.cpp|source/freertos/hal|source/applications/engine/factory_autotest_callbacks.c|source/freertos/kernel/Source/portable/MemMang/heap_2.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+					</sourceEntries>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+	</storageModule>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="pi5008_rtos.null.1801577499" name="pi5008_rtos"/>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="LGIT_Rel">
+			<resource resourceType="PROJECT" workspacePath="/pi5008_rtos"/>
+		</configuration>
+		<configuration configurationName="linux-dev"/>
+		<configuration configurationName="Default">
+			<resource resourceType="PROJECT" workspacePath="/pi5008_rtos"/>
+		</configuration>
+		<configuration configurationName="Debug">
+			<resource resourceType="PROJECT" workspacePath="/pi5008_sdk"/>
+		</configuration>
+		<configuration configurationName="Release">
+			<resource resourceType="PROJECT" workspacePath="/pi5008_rtos"/>
+		</configuration>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
+	<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="0.825708541.2016112957;0.825708541.2016112957.;cdt.managedbuild.tool.gnu.cpp.compiler.cygwin.base.237061466;cdt.managedbuild.tool.gnu.cpp.compiler.input.cygwin.1132098174">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="0.825708541.1312252759;0.825708541.1312252759.;cdt.managedbuild.tool.gnu.c.compiler.cygwin.base.1650121800;cdt.managedbuild.tool.gnu.c.compiler.input.cygwin.50867657">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="0.825708541;0.825708541.;cdt.managedbuild.tool.gnu.c.compiler.cygwin.base.232231196;cdt.managedbuild.tool.gnu.c.compiler.input.cygwin.585939030">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="0.825708541.1312252759;0.825708541.1312252759.;cdt.managedbuild.tool.gnu.cpp.compiler.cygwin.base.1462941909;cdt.managedbuild.tool.gnu.cpp.compiler.input.cygwin.1215236393">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="0.825708541">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="0.825708541.2061338318;0.825708541.2061338318.;cdt.managedbuild.tool.gnu.c.compiler.cygwin.base.1354337405;cdt.managedbuild.tool.gnu.c.compiler.input.cygwin.727245820">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="0.825708541.2016112957;0.825708541.2016112957.;cdt.managedbuild.tool.gnu.c.compiler.cygwin.base.152042491;cdt.managedbuild.tool.gnu.c.compiler.input.cygwin.50783249">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="0.825708541.2061338318;0.825708541.2061338318.;cdt.managedbuild.tool.gnu.cpp.compiler.cygwin.base.1954854894;cdt.managedbuild.tool.gnu.cpp.compiler.input.cygwin.988968806">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="0.1538313386">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="0.250792748">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="0.825708541;0.825708541.;cdt.managedbuild.tool.gnu.cpp.compiler.cygwin.base.1005629981;cdt.managedbuild.tool.gnu.cpp.compiler.input.cygwin.2049390646">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+	</storageModule>
+</cproject>

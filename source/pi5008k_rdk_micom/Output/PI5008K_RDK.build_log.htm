@@ -1,0 +1,376 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: •ÏVision V5.23.0.0
+Copyright (C) 2017 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: oh sangmin, smoh, LIC=BVRHN-Y5CAH-MVW11-AQLFG-62JWP-CGLZ6
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Standard Cortex-M only  Version: 5.23
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 4 (build 422)
+Assembler:       Armasm.exe V5.06 update 4 (build 422)
+Linker/Locator:  ArmLink.exe V5.06 update 4 (build 422)
+Library Manager: ArmAr.exe V5.06 update 4 (build 422)
+Hex Converter:   FromElf.exe V5.06 update 4 (build 422)
+CPU DLL:         SARMCM3.DLL V5.23
+Dialog DLL:      DARMSTM.DLL V1.68.0.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V2.0.18.0
+Dialog DLL:      TARMSTM.DLL V1.66.0.0
+ 
+<h2>Project:</h2>
+C:\PI5008SDK_SVN\source\pi5008k_rdk_micom\Debug\PI5008K_RDK.uvproj
+Project File Date:  11/12/2018
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 4 (build 422)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'PI5008K_RDK'
+compiling stm32f10x_it.c...
+compiling main.c...
+..\App\main.c(58): warning:  #223-D: function "PI5008K_Init" declared implicitly
+  		PI5008K_Init();
+..\App\main.c(61): warning:  #223-D: function "PI5008K_UartCmdProcessing" declared implicitly
+  			PI5008K_UartCmdProcessing();
+..\App\main.c(63): warning:  #223-D: function "PI5008K_remocon_test_longkey" declared implicitly
+  			PI5008K_remocon_test_longkey();
+..\App\main.c(64): warning:  #223-D: function "PI5008K_5Dir_Key_Read" declared implicitly
+  			PI5008K_5Dir_Key_Read();
+..\App\main.c(49): warning:  #177-D: variable "readKeyValue"  was declared but never referenced
+  	unsigned short readKeyValue = 0, oldReadKeyValue = 0;
+..\App\main.c(49): warning:  #177-D: variable "oldReadKeyValue"  was declared but never referenced
+  	unsigned short readKeyValue = 0, oldReadKeyValue = 0;
+..\App\main.c: 6 warnings, 0 errors
+compiling stm32f10x_cec.c...
+compiling misc.c...
+compiling stm32f10x_adc.c...
+compiling stm32f10x_bkp.c...
+compiling stm32f10x_can.c...
+compiling stm32f10x_crc.c...
+compiling stm32f10x_dac.c...
+compiling stm32f10x_dbgmcu.c...
+compiling stm32f10x_exti.c...
+compiling stm32f10x_dma.c...
+compiling stm32f10x_flash.c...
+compiling stm32f10x_fsmc.c...
+compiling stm32f10x_gpio.c...
+compiling stm32f10x_rtc.c...
+compiling stm32f10x_iwdg.c...
+compiling stm32f10x_pwr.c...
+compiling stm32f10x_i2c.c...
+compiling stm32f10x_rcc.c...
+compiling stm32f10x_sdio.c...
+compiling stm32f10x_spi.c...
+compiling stm32f10x_wwdg.c...
+compiling system_stm32f10x.c...
+compiling stm32f10x_usart.c...
+compiling stm32f10x_tim.c...
+compiling i2c.c...
+compiling pi5008k_test.c...
+compiling pi5008k_can.c...
+..\PI5008K\pi5008k_can.h(15): warning:  #1295-D: Deprecated declaration Set_Can_Init - give arg types
+  void Set_Can_Init();
+..\PI5008K\pi5008k_can.c(166): warning:  #223-D: function "UART1_PRINTF" declared implicitly
+    UART1_PRINTF("CAN1_RX0_IRQHandler\r\n");
+..\PI5008K\pi5008k_can.c(177): warning:  #223-D: function "UART1_PRINTF" declared implicitly
+    UART1_PRINTF("CAN1_RX1_IRQHandler\r\n");
+..\PI5008K\pi5008k_can.c: 3 warnings, 0 errors
+compiling init.c...
+..\Common\init.c(581): warning:  #223-D: function "Set_Can_Init" declared implicitly
+  	Set_Can_Init();
+..\Common\init.c: 1 warning, 0 errors
+compiling pi5008k_remocon.c...
+..\PI5008K\pi5008k_remocon.c(104): warning:  #223-D: function "U10secDelay" declared implicitly
+          U10secDelay(300);
+..\PI5008K\pi5008k_remocon.c(108): warning:  #223-D: function "UART1_PRINTF" declared implicitly
+              UART1_PRINTF("[ERROR] Queue empty, index: %d\n", i);
+..\PI5008K\pi5008k_remocon.c(141): warning:  #223-D: function "MDelay" declared implicitly
+  		MDelay(50);
+..\PI5008K\pi5008k_remocon.c(166): warning:  #223-D: function "UART1_PRINTF" declared implicitly
+  		
+R_KEY_PRINT(IR_KEY_TV_POWER);
+..\PI5008K\pi5008k_remocon.c(170): warning:  #223-D: function "UART1_PRINTF" declared implicitly
+  		
+R_KEY_PRINT(IR_KEY_DIR_UP);
+..\PI5008K\pi5008k_remocon.c(171): warning:  #223-D: function "PI5008K_Uart_Con_Remote_Cmd" declared implicitly
+  		PI5008K_Uart_Con_Remote_Cmd(REM_DIR_UP);
+..\PI5008K\pi5008k_remocon.c(176): warning:  #223-D: function "UART1_PRINTF" declared implicitly
+  		
+R_KEY_PRINT(IR_KEY_DIR_DOWN);
+..\PI5008K\pi5008k_remocon.c(177): warning:  #223-D: function "PI5008K_Uart_Con_Remote_Cmd" declared implicitly
+  		PI5008K_Uart_Con_Remote_Cmd(REM_DIR_DOWN);
+..\PI5008K\pi5008k_remocon.c(182): warning:  #223-D: function "UART1_PRINTF" declared implicitly
+  		
+R_KEY_PRINT(IR_KEY_DIR_LEFT);
+..\PI5008K\pi5008k_remocon.c(183): warning:  #223-D: function "PI5008K_Uart_Con_Remote_Cmd" declared implicitly
+  		PI5008K_Uart_Con_Remote_Cmd(REM_DIR_LEFT);
+..\PI5008K\pi5008k_remocon.c(188): warning:  #223-D: function "UART1_PRINTF" declared implicitly
+  		
+R_KEY_PRINT(IR_KEY_DIR_RIGHT);
+..\PI5008K\pi5008k_remocon.c(189): warning:  #223-D: function "PI5008K_Uart_Con_Remote_Cmd" declared implicitly
+  		PI5008K_Uart_Con_Remote_Cmd(REM_DIR_RIGHT);
+..\PI5008K\pi5008k_remocon.c(196): warning:  #223-D: function "UART1_PRINTF" declared implicitly
+  			
+R_KEY_PRINT(IR_KEY_DIR_CENTER);
+..\PI5008K\pi5008k_remocon.c(197): warning:  #223-D: function "PI5008K_Uart_Con_Remote_Cmd" declared implicitly
+  			PI5008K_Uart_Con_Remote_Cmd(REM_DIR_CENTER_LONG);
+..\PI5008K\pi5008k_remocon.c(201): warning:  #223-D: function "UART1_PRINTF" declared implicitly
+  			
+R_KEY_PRINT(IR_KEY_DIR_CENTER);
+..\PI5008K\pi5008k_remocon.c(202): warning:  #223-D: function "PI5008K_Uart_Con_Remote_Cmd" declared implicitly
+  			PI5008K_Uart_Con_Remote_Cmd(REM_DIR_CENTER);
+..\PI5008K\pi5008k_remocon.c(208): warning:  #223-D: function "UART1_PRINTF" declared implicitly
+  		
+R_KEY_PRINT(IR_KEY_REG_TEST_NUM1);
+..\PI5008K\pi5008k_remocon.c(210): warning:  #223-D: function "PI5008K_Uart_Reg_Single_Write" declared implicitly
+  		PI5008K_Uart_Reg_Single_Write(0xffffffff,0xdeadface);
+..\PI5008K\pi5008k_remocon.c(215): warning:  #223-D: function "UART1_PRINTF" declared implicitly
+  		
+R_KEY_PRINT(IR_KEY_REG_TEST_NUM2);
+..\PI5008K\pi5008k_remocon.c(217): warning:  #223-D: function "PI5008K_Uart_Reg_Single_Write" declared implicitly
+  		PI5008K_Uart_Reg_Single_Write(0xEEEEEEEE,0xceedcafe);
+..\PI5008K\pi5008k_remocon.c(228): warning:  #223-D: function "UART1_PRINTF" declared implicitly
+  		
+R_KEY_PRINT(IR_KEY_TV_POWER);
+..\PI5008K\pi5008k_remocon.c(234): warning:  #223-D: function "UART1_PRINTF" declared implicitly
+  			
+R_KEY_PRINT(IR_KEY_DIR_UP);
+..\PI5008K\pi5008k_remocon.c(235): warning:  #223-D: function "PI5008K_Uart_Con_Remote_Cmd" declared implicitly
+  			PI5008K_Uart_Con_Remote_Cmd(REM_DIR_UP_LONG);
+..\PI5008K\pi5008k_remocon.c(239): warning:  #223-D: function "UART1_PRINTF" declared implicitly
+  			
+R_KEY_PRINT(IR_KEY_DIR_UP);
+..\PI5008K\pi5008k_remocon.c(240): warning:  #223-D: function "PI5008K_Uart_Con_Remote_Cmd" declared implicitly
+  			PI5008K_Uart_Con_Remote_Cmd(REM_DIR_UP);		
+..\PI5008K\pi5008k_remocon.c(248): warning:  #223-D: function "UART1_PRINTF" declared implicitly
+  			
+R_KEY_PRINT(IR_KEY_DIR_DOWN);
+..\PI5008K\pi5008k_remocon.c(249): warning:  #223-D: function "PI5008K_Uart_Con_Remote_Cmd" declared implicitly
+  			PI5008K_Uart_Con_Remote_Cmd(REM_DIR_DOWN_LONG);
+..\PI5008K\pi5008k_remocon.c(253): warning:  #223-D: function "UART1_PRINTF" declared implicitly
+  			
+R_KEY_PRINT(IR_KEY_DIR_DOWN);
+..\PI5008K\pi5008k_remocon.c(254): warning:  #223-D: function "PI5008K_Uart_Con_Remote_Cmd" declared implicitly
+  			PI5008K_Uart_Con_Remote_Cmd(REM_DIR_DOWN);
+..\PI5008K\pi5008k_remocon.c(262): warning:  #223-D: function "UART1_PRINTF" declared implicitly
+  			
+R_KEY_PRINT(IR_KEY_DIR_LEFT);
+..\PI5008K\pi5008k_remocon.c(263): warning:  #223-D: function "PI5008K_Uart_Con_Remote_Cmd" declared implicitly
+  			PI5008K_Uart_Con_Remote_Cmd(REM_DIR_LEFT_LONG);
+..\PI5008K\pi5008k_remocon.c(267): warning:  #223-D: function "UART1_PRINTF" declared implicitly
+  			
+R_KEY_PRINT(IR_KEY_DIR_LEFT);
+..\PI5008K\pi5008k_remocon.c(268): warning:  #223-D: function "PI5008K_Uart_Con_Remote_Cmd" declared implicitly
+  			PI5008K_Uart_Con_Remote_Cmd(REM_DIR_LEFT);
+..\PI5008K\pi5008k_remocon.c(276): warning:  #223-D: function "UART1_PRINTF" declared implicitly
+  			
+R_KEY_PRINT(IR_KEY_DIR_RIGHT);
+..\PI5008K\pi5008k_remocon.c(277): warning:  #223-D: function "PI5008K_Uart_Con_Remote_Cmd" declared implicitly
+  			PI5008K_Uart_Con_Remote_Cmd(REM_DIR_RIGHT_LONG);
+..\PI5008K\pi5008k_remocon.c(281): warning:  #223-D: function "UART1_PRINTF" declared implicitly
+  			
+R_KEY_PRINT(IR_KEY_DIR_RIGHT);
+..\PI5008K\pi5008k_remocon.c(282): warning:  #223-D: function "PI5008K_Uart_Con_Remote_Cmd" declared implicitly
+  			PI5008K_Uart_Con_Remote_Cmd(REM_DIR_RIGHT);
+..\PI5008K\pi5008k_remocon.c(291): warning:  #223-D: function "UART1_PRINTF" declared implicitly
+  			
+R_KEY_PRINT(IR_KEY_DIR_CENTER);
+..\PI5008K\pi5008k_remocon.c(292): warning:  #223-D: function "PI5008K_Uart_Con_Remote_Cmd" declared implicitly
+  			PI5008K_Uart_Con_Remote_Cmd(REM_DIR_CENTER_LONG);
+..\PI5008K\pi5008k_remocon.c(296): warning:  #223-D: function "UART1_PRINTF" declared implicitly
+  			
+R_KEY_PRINT(IR_KEY_DIR_CENTER);
+..\PI5008K\pi5008k_remocon.c(297): warning:  #223-D: function "PI5008K_Uart_Con_Remote_Cmd" declared implicitly
+  			PI5008K_Uart_Con_Remote_Cmd(REM_DIR_CENTER);
+..\PI5008K\pi5008k_remocon.c(305): warning:  #223-D: function "UART1_PRINTF" declared implicitly
+  			
+R_KEY_PRINT(TG_NAVI);
+..\PI5008K\pi5008k_remocon.c(306): warning:  #223-D: function "PI5008K_Uart_Con_Remote_Cmd" declared implicitly
+  			PI5008K_Uart_Con_Remote_Cmd(REM_NAVI_LONG);
+..\PI5008K\pi5008k_remocon.c(310): warning:  #223-D: function "UART1_PRINTF" declared implicitly
+  			
+R_KEY_PRINT(TG_NAVI);
+..\PI5008K\pi5008k_remocon.c(311): warning:  #223-D: function "PI5008K_Uart_Con_Remote_Cmd" declared implicitly
+  			PI5008K_Uart_Con_Remote_Cmd(REM_NAVI);
+..\PI5008K\pi5008k_remocon.c(321): warning:  #223-D: function "UART1_PRINTF" declared implicitly
+  			
+R_KEY_PRINT(TG_NAVI);
+..\PI5008K\pi5008k_remocon.c(322): warning:  #223-D: function "PI5008K_Uart_Con_Remote_Cmd" declared implicitly
+  			PI5008K_Uart_Con_Remote_Cmd(REM_MENU_LONG);
+..\PI5008K\pi5008k_remocon.c(326): warning:  #223-D: function "UART1_PRINTF" declared implicitly
+  			
+R_KEY_PRINT(TG_MENU);
+..\PI5008K\pi5008k_remocon.c(327): warning:  #223-D: function "PI5008K_Uart_Con_Remote_Cmd" declared implicitly
+  			PI5008K_Uart_Con_Remote_Cmd(REM_MENU);
+..\PI5008K\pi5008k_remocon.c(334): warning:  #223-D: function "UART1_PRINTF" declared implicitly
+          
+R_KEY_PRINT(IR_KEY_TV_NUM_1);   break;
+..\PI5008K\pi5008k_remocon.c(425): warning:  #223-D: function "U10secDelay" declared implicitly
+  			U10secDelay(10);
+..\PI5008K\pi5008k_remocon.c(434): warning:  #223-D: function "UART1_PRINTF" declared implicitly
+  			UART1_PRINTF("repeat\n");
+..\PI5008K\pi5008k_remocon.c(456): warning:  #223-D: function "U10secDelay" declared implicitly
+  			U10secDelay(10);
+..\PI5008K\pi5008k_remocon.c(494): warning:  #223-D: function "U10secDelay" declared implicitly
+  			U10secDelay(10);
+..\PI5008K\pi5008k_remocon.c(503): warning:  #223-D: function "UART1_PRINTF" declared implicitly
+  			UART1_PRINTF("repeat\n");
+..\PI5008K\pi5008k_remocon.c(508): warning:  #223-D: function "UART1_PRINTF" declared implicitly
+  			UART1_PRINTF("[error] diffVal = %d\\n",diffVal);
+..\PI5008K\pi5008k_remocon.c: 56 warnings, 0 errors
+compiling pi5008k_func.c...
+..\PI5008K\pi5008k_func.c(82): warning:  #223-D: function "vfprintf_" declared implicitly
+  	vfprintf_((&PutUart1Con), format, arg);
+..\PI5008K\pi5008k_func.c(90): warning:  #223-D: function "vfprintf_" declared implicitly
+  	vfprintf_((&PutUart2Con), format, arg);
+..\PI5008K\pi5008k_func.c(266): warning:  #223-D: function "memset" declared implicitly
+  	memset(pi5008k_usart1_get_buffer,0,sizeof(pi5008k_usart1_get_buffer));
+..\PI5008K\pi5008k_func.c(286): warning:  #223-D: function "PI5008K_Reset_Con" declared implicitly
+  	PI5008K_Reset_Con();	
+..\PI5008K\pi5008k_func.c(293): warning:  #223-D: function "memset" declared implicitly
+  	memset(pi5008k_usart1_get_buffer,0,PI5008K_USART_BUFFER_SIZE); 
+..\PI5008K\pi5008k_func.c(302): warning:  #223-D: function "memset" declared implicitly
+  	memset(pi5008k_usart2_get_buffer,0,PI5008K_USART_BUFFER_SIZE); 
+..\PI5008K\pi5008k_func.c(332): warning:  #177-D: variable "arg_temp"  was declared but never referenced
+  	char arg_temp[10];
+..\PI5008K\pi5008k_func.c(333): warning:  #177-D: variable "arg_temp_size"  was declared but never referenced
+  	int arg_temp_size;
+..\PI5008K\pi5008k_func.c(378): warning:  #223-D: function "memcpy" declared implicitly
+  			memcpy(pi5008k_usart1_get_cmd_arg[pi5008k_usart1_arg_div_point_cnt-1], \
+..\PI5008K\pi5008k_func.c(385): warning:  #223-D: function "memcpy" declared implicitly
+  			memcpy(pi5008k_usart1_get_cmd,usart_bf,pi5008k_usart1_buffer_cnt);
+..\PI5008K\pi5008k_func.c(412): warning:  #223-D: function "strlen" declared implicitly
+  				pi5008k_usart1_buffer_cnt = strlen(gTempCmdBuffer1);
+..\PI5008K\pi5008k_func.c(428): warning:  #223-D: function "memcpy" declared implicitly
+  				memcpy(pi5008k_usart1_get_cmd,usart_bf,pi5008k_usart1_buffer_cnt);
+..\PI5008K\pi5008k_func.c(435): warning:  #223-D: function "memcpy" declared implicitly
+  					memcpy(pi5008k_usart1_get_cmd_arg[pi5008k_usart1_arg_div_point_cnt-1], \
+..\PI5008K\pi5008k_func.c(454): warning:  #223-D: function "strcpy" declared implicitly
+  		strcpy(gTempCmdBuffer1, usart_bf);
+..\PI5008K\pi5008k_func.c(357): warning:  #177-D: variable "i"  was declared but never referenced
+  	int i=0;
+..\PI5008K\pi5008k_func.c(483): warning:  #223-D: function "memcpy" declared implicitly
+  		memcpy(pi5008k_usart2_get_cmd,usart_bf,pi5008k_usart2_buffer_cnt);
+..\PI5008K\pi5008k_func.c(470): warning:  #177-D: variable "cmd_arg_buffer_size"  was declared but never referenced
+  	int cmd_arg_buffer_size;
+..\PI5008K\pi5008k_func.c(519): warning:  #223-D: function "memcpy" declared implicitly
+  			memcpy(pi5008k_usart2_get_cmd_arg[pi5008k_usart2_arg_div_point_cnt-1], \
+..\PI5008K\pi5008k_func.c(525): warning:  #223-D: function "memcpy" declared implicitly
+  			memcpy(pi5008k_usart2_get_cmd_arg,usart_bf,pi5008k_usart2_buffer_cnt);
+..\PI5008K\pi5008k_func.c(548): warning:  #223-D: function "strlen" declared implicitly
+  				pi5008k_usart2_buffer_cnt = strlen(gTempCmdBuffer2);
+..\PI5008K\pi5008k_func.c(564): warning:  #223-D: function "memcpy" declared implicitly
+  				memcpy(pi5008k_usart2_get_cmd,usart_bf,pi5008k_usart2_buffer_cnt);
+..\PI5008K\pi5008k_func.c(571): warning:  #223-D: function "memcpy" declared implicitly
+  					memcpy(pi5008k_usart2_get_cmd_arg[pi5008k_usart2_arg_div_point_cnt-1], \
+..\PI5008K\pi5008k_func.c(590): warning:  #223-D: function "strcpy" declared implicitly
+  		strcpy(gTempCmdBuffer2, usart_bf);
+..\PI5008K\pi5008k_func.c(638): warning:  #186-D: pointless comparison of unsigned integer with zero
+      if (num < 0 && base == 10)
+..\PI5008K\pi5008k_func.c(677): warning:  #223-D: function "strcpy" declared implicitly
+  	strcpy(&str_cs_buf[1],str_0x);
+..\PI5008K\pi5008k_func.c(700): warning:  #1166-D: returning pointer to local variable
+  	return str_cs_buf;
+..\PI5008K\pi5008k_func.c(711): warning:  #223-D: function "strcmp" declared implicitly
+  	if(!strcmp(pi5008k_usart1_get_cmd,"t"))
+..\PI5008K\pi5008k_func.c(721): warning:  #223-D: function "strcpy" declared implicitly
+  					strcpy(send_cmd_buf,"t con rem up");					
+..\PI5008K\pi5008k_func.c(725): warning:  #223-D: function "strcpy" declared implicitly
+  					strcpy(send_cmd_buf,"t con rem down");		
+..\PI5008K\pi5008k_func.c(729): warning:  #223-D: function "strcpy" declared implicitly
+  					strcpy(send_cmd_buf,"t con rem left");		
+..\PI5008K\pi5008k_func.c(733): warning:  #223-D: function "strcpy" declared implicitly
+  					strcpy(send_cmd_buf,"t con rem right");		
+..\PI5008K\pi5008k_func.c(737): warning:  #223-D: function "strcpy" declared implicitly
+  					strcpy(send_cmd_buf,"t con rem center");		
+..\PI5008K\pi5008k_func.c(740): warning:  #223-D: function "strcat" declared implicitly
+  				strcat(send_cmd_buf,PI5008K_UartcmdGetCheckSum(send_cmd_buf,strlen(send_cmd_buf)));
+..\PI5008K\pi5008k_func.c(740): warning:  #223-D: function "strlen" declared implicitly
+  				strcat(send_cmd_buf,PI5008K_UartcmdGetCheckSum(send_cmd_buf,strlen(send_cmd_buf)));
+..\PI5008K\pi5008k_func.c(740): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+  				strcat(send_cmd_buf,PI5008K_UartcmdGetCheckSum(send_cmd_buf,strlen(send_cmd_buf)));
+..\PI5008K\pi5008k_func.c(764): warning:  #223-D: function "strcpy" declared implicitly
+  				strcpy(send_cmd_buf,"t reg sw ");					
+..\PI5008K\pi5008k_func.c(765): warning:  #223-D: function "strlen" declared implicitly
+  				temp=strlen(send_cmd_buf)+strlen(pi5008k_usart1_get_cmd_arg[2])+\
+..\PI5008K\pi5008k_func.c(768): warning:  #223-D: function "strcat" declared implicitly
+  				strcat(send_cmd_buf,pi5008k_usart1_get_cmd_arg[2]);
+..\PI5008K\pi5008k_func.c(771): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+  				strcat(send_cmd_buf,PI5008K_UartcmdGetCheckSum(send_cmd_buf,temp));
+..\PI5008K\pi5008k_func.c(828): warning:  #520-D: initialization with "{...}" expected for aggregate object
+  	char send_cmd_buf[100]=0;
+..\PI5008K\pi5008k_func.c(831): warning:  #520-D: initialization with "{...}" expected for aggregate object
+  	char str_add[100]=0;
+..\PI5008K\pi5008k_func.c(832): warning:  #520-D: initialization with "{...}" expected for aggregate object
+  	char str_data[100]=0;
+..\PI5008K\pi5008k_func.c(835): warning:  #223-D: function "strcpy" declared implicitly
+  	strcpy(&str_add[0],str_0x);
+..\PI5008K\pi5008k_func.c(846): warning:  #223-D: function "strlen" declared implicitly
+  	temp=strlen(send_cmd_buf)+strlen(str_add)+\
+..\PI5008K\pi5008k_func.c(849): warning:  #223-D: function "strcat" declared implicitly
+  	strcat(send_cmd_buf,str_add);
+..\PI5008K\pi5008k_func.c(852): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+  	strcat(send_cmd_buf,PI5008K_UartcmdGetCheckSum(send_cmd_buf,temp));
+..\PI5008K\pi5008k_func.c(881): warning:  #223-D: function "strcpy" declared implicitly
+  			strcpy(send_cmd_buf,"t con rem up");					
+..\PI5008K\pi5008k_func.c(886): warning:  #223-D: function "strcpy" declared implicitly
+  			strcpy(send_cmd_buf,"t con rem uplong");					
+..\PI5008K\pi5008k_func.c(892): warning:  #223-D: function "strcpy" declared implicitly
+  			strcpy(send_cmd_buf,"t con rem down");		
+..\PI5008K\pi5008k_func.c(897): warning:  #223-D: function "strcpy" declared implicitly
+  			strcpy(send_cmd_buf,"t con rem downlong");		
+..\PI5008K\pi5008k_func.c(902): warning:  #223-D: function "strcpy" declared implicitly
+  			strcpy(send_cmd_buf,"t con rem left");		
+..\PI5008K\pi5008k_func.c(907): warning:  #223-D: function "strcpy" declared implicitly
+  			strcpy(send_cmd_buf,"t con rem leftlong");		
+..\PI5008K\pi5008k_func.c(912): warning:  #223-D: function "strcpy" declared implicitly
+  			strcpy(send_cmd_buf,"t con rem right"); 	
+..\PI5008K\pi5008k_func.c(917): warning:  #223-D: function "strcpy" declared implicitly
+  			strcpy(send_cmd_buf,"t con rem rightlong"); 	
+..\PI5008K\pi5008k_func.c(922): warning:  #223-D: function "strcpy" declared implicitly
+  			strcpy(send_cmd_buf,"t con rem center");		
+..\PI5008K\pi5008k_func.c(927): warning:  #223-D: function "strcpy" declared implicitly
+  			strcpy(send_cmd_buf,"t con rem centerlong");					
+..\PI5008K\pi5008k_func.c(932): warning:  #223-D: function "strcpy" declared implicitly
+  			strcpy(send_cmd_buf,"t con rem menu");					
+..\PI5008K\pi5008k_func.c(937): warning:  #223-D: function "strcpy" declared implicitly
+  			strcpy(send_cmd_buf,"t con rem menulong");					
+..\PI5008K\pi5008k_func.c(942): warning:  #223-D: function "strcpy" declared implicitly
+  			strcpy(send_cmd_buf,"t con rem navi");					
+..\PI5008K\pi5008k_func.c(947): warning:  #223-D: function "strcpy" declared implicitly
+  			strcpy(send_cmd_buf,"t con rem navilong");					
+..\PI5008K\pi5008k_func.c(956): warning:  #223-D: function "strcat" declared implicitly
+  	strcat(send_cmd_buf,PI5008K_UartcmdGetCheckSum(send_cmd_buf,strlen(send_cmd_buf)));
+..\PI5008K\pi5008k_func.c(956): warning:  #223-D: function "strlen" declared implicitly
+  	strcat(send_cmd_buf,PI5008K_UartcmdGetCheckSum(send_cmd_buf,strlen(send_cmd_buf)));
+..\PI5008K\pi5008k_func.c(956): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+  	strcat(send_cmd_buf,PI5008K_UartcmdGetCheckSum(send_cmd_buf,strlen(send_cmd_buf)));
+..\PI5008K\pi5008k_func.c(978): warning:  #177-D: variable "i2cData"  was declared but never referenced
+  	char i2cData=0;
+..\PI5008K\pi5008k_func.c(1080): warning:  #223-D: function "memset" declared implicitly
+  			memset(pi5008k_usart1_get_cmd_arg_div_point,0x00,10);
+..\PI5008K\pi5008k_func.c(1107): warning:  #223-D: function "memset" declared implicitly
+  				memset(pi5008k_usart2_get_cmd,0x00,PI5008K_USART_BUFFER_SIZE);			
+..\PI5008K\pi5008k_func.c(1140): warning:  #223-D: function "IrRxQueue_EnQueue" declared implicitly
+          IrRxQueue_EnQueue(diffVal);
+..\PI5008K\pi5008k_func.c(1156): warning:  #177-D: variable "timVal"  was declared but never referenced
+      uint16_t timVal, diffVal;
+..\PI5008K\pi5008k_func.c(1156): warning:  #177-D: variable "diffVal"  was declared but never referenced
+      uint16_t timVal, diffVal;
+..\PI5008K\pi5008k_func.c(1169): warning:  #177-D: variable "timVal"  was declared but never referenced
+      uint16_t timVal, diffVal;
+..\PI5008K\pi5008k_func.c(1169): warning:  #177-D: variable "diffVal"  was declared but never referenced
+      uint16_t timVal, diffVal;
+..\PI5008K\pi5008k_func.c(1371): warning:  #940-D: missing return statement at end of non-void function "PI5008K_5Dir_Key_Read" 
+  }
+..\PI5008K\pi5008k_func.c: 72 warnings, 0 errors
+linking...
+Program Size: Code=12026 RO-data=590 RW-data=164 ZI-data=2636  
+FromELF: creating hex file...
+After Build - User command #1: fromelf --bin --output ..\Output\PI5008K_RDK.bin ..\Output\PI5008K_RDK.axf
+"..\Output\PI5008K_RDK.axf" - 0 Error(s), 138 Warning(s).
+Build Time Elapsed:  00:00:09
+</pre>
+</body>
+</html>

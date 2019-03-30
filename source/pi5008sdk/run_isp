@@ -1,0 +1,24 @@
+echo isp running...\n
+
+########################################################
+#OV9716 720p hdr Bayer
+#restore isp_firm_v20180601_OV_720p_HDR_30fps_MAXIM.bin binary 0x20000000
+restore isp_test.bin binary 0x20000000
+
+########################################################
+
+#gpio5 pwdn1, gpio7 pwdn2 - only parallel version
+#set {int}0xf0100024=2
+#set {int}0xf010002c=2
+#set {int}0xf0100004=0x02010201
+
+
+#core1 init vector addr set
+set {int}0xf1500084=0x2000
+
+# core1 reset clear
+# old version
+#set {int}0xf0100158=1
+
+# after pin map changed
+set {int}0xf0100080=1

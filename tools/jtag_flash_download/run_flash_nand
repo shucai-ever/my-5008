@@ -1,0 +1,139 @@
+
+# arg0 : flash image binary
+define flash_burn
+	if ( $argc != 1 )
+		echo "Parameter Error!"\n
+	else
+		shell echo "set \$MyVar=$(wc -c $arg0 |awk '{print $1}')" > temp
+		source temp 
+		shell rm -rf temp
+		set $flash_image_size=$MyVar
+	
+		set {int}($info_addr)=$version
+		set {int}($info_addr+0x4)=$buffer_addr
+		set {int}($info_addr+0x8)=$buffer_size
+		set {int}($info_addr+0xc)=$read_buffer_addr
+		set {int}($info_addr+0x10)=$verify_flag
+		set {int}($info_addr+0x14)=$flash_addr
+		set {int}($info_addr+0x18)=$flash_image_size
+		set {int}($info_addr+0x1c)=$flash_type
+		set {int}($info_addr+0x20)=$spi_write_div
+		set {int}($info_addr+0x24)=$spi_read_div
+		set {int}($info_addr+0x28)=$spi_read_dly
+		set {int}($info_addr+0x2c)=$erase_all
+		
+		program_flash $buffer_addr $buffer_size $flash_addr $arg0 $flash_image_size
+	end
+end
+
+# arg0 : address for write buffer
+# arg1 : size of write buffer
+# arg2 : Flash address
+# arg3 : flash image binary
+# arg4 : size of flash image file
+define program_flash
+  if ( $argc != 5 )
+    echo "Parameter Error!"\n
+  else
+    load
+    b _buffer_done
+	c
+	
+    set $binary_file_begin=(0-$arg1)
+    set $binary_file_end=0
+    set $remain=$arg4
+    set $burned=0
+    if ( $remain < $arg1 )
+      set $binary_file_begin=(0-$remain)
+    end
+    
+    while ( $remain )
+      if ( $remain >= $arg1 )
+        set $binary_file_begin+=$arg1
+        set $binary_file_end=$binary_file_begin+$arg1
+        set $remain-=$arg1
+      else
+        if ( $burned == 0)
+          set $binary_file_begin+=$remain
+        else
+          set $binary_file_begin+=$arg1
+        end
+        set $binary_file_end=$binary_file_begin+$remain
+        set $remain-=$remain
+      end
+      set $burned=1
+      echo "change memory access mode bus"
+      change_memory_access_mode bus
+      restore $arg3 binary ($arg0-$binary_file_begin) $binary_file_begin ($binary_file_end)
+      echo "change memory access mode cpu"
+      change_memory_access_mode cpu
+      c
+      p $r0
+      if ( $ != 0 )
+        echo "Flash programming error!"\n
+        loop_break
+      end
+    end
+    if ( $remain == 0)
+      echo "Flash program finished!"\n
+      c
+    end
+#    d 1
+#    set remote ignore_message_in_user_cmd 0
+  end
+end
+
+define asicinit
+	if ( $argc != 2 )
+		echo "Parameter Error!"\n
+	else
+		echo "Target reset ..."\n
+		target remote:1111
+		reset-and-hold
+
+		#SPI(SDCARD) CLK PAD IN/OUT MODE
+		set {int}0xf0100010=0x01020302
+		#SPI(FLASH) CLK PAD IN/OUT MODE
+		set {int}0xf0100018=0x03030302
+		
+		restore $arg0 binary 0x10000
+		
+		p $pc=0x10000
+		b *($arg1)
+		c
+	end
+end
+
+###########################################################
+###				burner program parameters				###
+###########################################################
+set pagination off
+target remote:1111
+# burner program version - do not modify
+set $version=0x4
+# burner program information addr - do not modify
+set $info_addr=0x20000000
+
+set $buffer_addr=0x20120000
+set $buffer_size=0x1000000
+set $read_buffer_addr=$buffer_addr + $buffer_size
+set $verify_flag=1
+set $flash_addr=0x0
+set $spi_write_div=0
+set $spi_read_div=0
+set $spi_read_dly=3
+set $break_addr=0x10124
+#erase all flash - Do not set!!! Only developing purpose
+set $erase_all=0
+
+# flash type
+#	0: nor flash
+#	1: nand
+#	2: nand ftl
+asicinit "PI5008K_Init_ddr3.bin" $break_addr
+
+set $flash_type=1
+flash_burn "flashimage_nonFTL.bin"
+
+set $flash_type=2
+flash_burn "flashimage_FTL.bin"

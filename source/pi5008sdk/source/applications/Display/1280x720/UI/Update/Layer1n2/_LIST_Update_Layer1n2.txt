@@ -1,0 +1,4 @@
+Dialog_Update.bmp
+FactoryReset_Sel.bmp
+FwUpdate_Sel.bmp
+UpdateBack_Sel.bmp

@@ -1,0 +1,15 @@
+LOAD 0x20100000 0x0FF00000 ; address base 0x20040000, max_size=256M - 256K
+{
+	DRAM 0x20100000
+	{
+		* (+RO)
+		LOADADDR NEXT __data_lmastart
+		ADDR NEXT __data_start		
+		* (+RW,+ZI)
+		STACK = 0x30000000
+	}	
+	DRAM_RSV + 0 ALIGN 16
+	{
+		ADDR __pi5008_rsv_area
+	}
+}

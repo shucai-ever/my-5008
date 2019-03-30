@@ -1,0 +1,6 @@
+#ifndef PRJ_CONFIG_DEF_ENUM_H
+#define PRJ_CONFIG_DEF_ENUM_H
+
+
+
+#endif // PRJ_CONFIG_DEF_ENUM_H

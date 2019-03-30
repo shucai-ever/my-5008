@@ -1,0 +1,6 @@
+echo flash writer\n
+
+echo loading flash data...\n
+
+#restore flash_nand.bin binary 0x2F000000
+restore flash_nor.bin binary 0x2F000000

@@ -1,0 +1,13 @@
+Dialog_CalibFailRetry.bmp
+Dialog_CalibManual.bmp
+Dialog_RunMenu.bmp
+Dialog_SaveView.bmp
+ManualCalibFront_Sel.bmp
+ManualCalibLeft_Sel.bmp
+ManualCalibRight_Sel.bmp
+ManualCalibRear_Sel.bmp
+ManualCalibViewGen_Sel.bmp
+ManualCalibBack_Sel.bmp
+CalibAuto_Sel.bmp
+CalibManual_Sel.bmp
+CalibBack_Sel.bmp

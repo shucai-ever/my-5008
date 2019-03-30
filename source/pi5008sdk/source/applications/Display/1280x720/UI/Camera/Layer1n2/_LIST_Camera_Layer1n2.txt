@@ -1,0 +1,7 @@
+CameraFront_Sel.bmp
+CameraLeft_Sel.bmp
+CameraRight_Sel.bmp
+CameraRear_Sel.bmp
+CameraQuad_Sel.bmp
+CameraCapture_Sel.bmp
+CameraBack_Sel.bmp

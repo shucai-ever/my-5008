@@ -1,0 +1,16 @@
+#ifndef __PVIRX_USER_CONFIG_H__
+#define __PVIRX_USER_CONFIG_H__
+
+#include "pvirx_drvcommon.h"
+
+#define MAX_PVIRX_CHANCNT 	(4)
+
+extern enum _eCameraStandard DEFAULT_CAMERA_STANDARD;
+extern enum _eCameraResolution DEFAULT_CAMERA_RESOLUTION;
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+extern _stAttrChip PVIRX_ATTR_CHIP[MAX_PVIRX_CHANCNT];
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#endif /* __PVIRX_USER_CONFIG_H__ */

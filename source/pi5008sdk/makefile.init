@@ -1,0 +1,82 @@
+##################### PI5008 SDK compile environment ########################
+
+##################### include directory ###################
+PI5008_INCLUDE_DIR := ../source/ # Must exist
+PI5008_INCLUDE_DIR += -I../source/applications
+PI5008_INCLUDE_DIR += -I../source/applications/Application
+PI5008_INCLUDE_DIR += -I../source/applications/Display
+PI5008_INCLUDE_DIR += -I../source/applications/SVM
+PI5008_INCLUDE_DIR += -I../source/applications/Calibration
+PI5008_INCLUDE_DIR += -I../source/lib/Calibration
+PI5008_INCLUDE_DIR += -I../source/lib/Calibration/libOffLineCalib
+PI5008_INCLUDE_DIR += -I../source/lib/Calibration/libOffLineCalib/data
+PI5008_INCLUDE_DIR += -I../source/lib/Calibration/libSvmView
+PI5008_INCLUDE_DIR += -I../source/lib/ObjectDetect/libObjectDetect
+PI5008_INCLUDE_DIR += -I../source/camera
+PI5008_INCLUDE_DIR += -I../source/common
+PI5008_INCLUDE_DIR += -I../source/config
+PI5008_INCLUDE_DIR += -I../source/drivers/include
+PI5008_INCLUDE_DIR += -I../source/drivers/system
+PI5008_INCLUDE_DIR += -I../source/os
+PI5008_INCLUDE_DIR += -I../source/os/kernel/Source/include
+PI5008_INCLUDE_DIR += -I../source/os/nds32
+PI5008_INCLUDE_DIR += -I../source/os/osal
+PI5008_INCLUDE_DIR += -I../source/tasks
+PI5008_INCLUDE_DIR += -I../source/tasks/Audio
+PI5008_INCLUDE_DIR += -I../source/tasks/Calibration
+PI5008_INCLUDE_DIR += -I../source/tasks/CLI
+PI5008_INCLUDE_DIR += -I../source/tasks/Display
+PI5008_INCLUDE_DIR += -I../source/tasks/DynBlend
+PI5008_INCLUDE_DIR += -I../source/tasks/Emergency
+PI5008_INCLUDE_DIR += -I../source/tasks/FS
+PI5008_INCLUDE_DIR += -I../source/tasks/FWDN
+PI5008_INCLUDE_DIR += -I../source/tasks/Monitor
+PI5008_INCLUDE_DIR += -I../source/tasks/SVM
+PI5008_INCLUDE_DIR += -I../source/tasks/UARTCon
+PI5008_INCLUDE_DIR += -I../source/tasks/UI
+PI5008_INCLUDE_DIR += -I../source/tasks/Cache
+PI5008_INCLUDE_DIR += -I../source/api
+PI5008_INCLUDE_DIR += -I../source/api/Calibration
+
+
+##################### include files on compile option ###################
+PI5008_INCLUDE_FILE := ../source/drivers/system/pi5008_config.h # Must exist
+PI5008_INCLUDE_FILE += -include../source/config/prj_config.h
+PI5008_INCLUDE_FILE += -include../source/config/board_config.h
+
+##################### compile cflags ###################
+PI5008_OTHER_CFLAGS := -c -fmessage-length=0 -Wno-unused-function -Werror-implicit-function-declaration -mcmodel=large -mcpu=d1088-spu -fno-builtin -fomit-frame-pointer  -funroll-loops -nostdlib -fno-strict-aliasing  -ffunction-sections -fsingle-precision-constant -mno-sched-prolog-epilog
+
+##################### include library files ###################
+PI5008_LIB := SvmView # Must exist
+# Include library of offline calibration. If not use, comment. 
+PI5008_LIB += -lOffLineCalib
+# Include library of FAT/FTL. If not use, comment. 
+PI5008_LIB += -lFAT_FTL_Debug
+# Include library of FreeRTOS Kernel. 
+PI5008_LIB += -lPI5008FreeRTOS
+# Include library of dynamic blending. If not define "DB_LIB_USE", comment. 
+PI5008_LIB += -lod
+# Include library of dsp. 
+PI5008_LIB += -ldsp
+# Include library of math.
+PI5008_LIB += -lm # Must include last !!!.
+
+##################### include library directory ###################
+# Include library directory of svm view. If not use, comment. 
+PI5008_LIB_DIR := ../source/lib/Calibration/libSvmView # Must exist
+# Include library directory of offline calibration. If not use, comment. 
+PI5008_LIB_DIR += -L../source/lib/Calibration/libOffLineCalib
+# Include library directory of FAT/FTL. If not use, comment. 
+PI5008_LIB_DIR += -L../source/lib
+# Include library directory of dynamic blending. If not define "DB_LIB_USE", comment. 
+PI5008_LIB_DIR += -L../source/lib/ObjectDetect/libObjectDetect
+
+
+##################### compile ldflags ###################
+PI5008_OTHER_LDFLAGS := -O0 -g3 -mcmodel=large -nostartfiles -fno-builtin -static -Wl,--gc-sections -mvh -ldsp -mext-dsp -mext-zol
+
+
+##################### compile asm flags ###################
+PI5008_OTHER_AFLAGS := -include$(PI5008_INCLUDE_FILE) -O0 -g3 -Wall -c -fmessage-length=0 -mcmodel=large -mcpu=d1088-spu -fno-builtin -fomit-frame-pointer  -funroll-loops -nostdlib -fno-strict-aliasing  -ffunction-sections -fsingle-precision-constant
+
